@@ -1,0 +1,1418 @@
+/* ============ GLOBAL / SCROLL / OFFSETS ============ */
+/* =========================
+   FINEXPERTS GLOBAL THEME
+   (1 root, 1 body bg)
+   ========================= */
+
+:root{
+  /* Base / text */
+  --bg0: #071121;  /* donker navy */
+  --bg1: #0b1a33;  /* iets lichter navy */
+  --bg2: #06101f;  /* terug donker */
+  --text: #eaf0f7;
+  --muted: rgba(226,232,240,.78);
+
+  /* Surfaces */
+  --panel: rgba(255,255,255,.06);
+  --panel2: rgba(255,255,255,.08);
+  --border: rgba(255,255,255,.10);
+
+  /* Brand (pine-green) + accent (groen CTA) */
+  --brand: #1F5D4C;
+  --brand-strong: #164236;
+  --brand-soft: rgba(31,93,76,.16);
+
+  --accent: #22c55e; /* groen voor CTA’s */
+  --accent-strong: #16a34a;
+
+  /* FinExperts “lampjes” (glows) */
+  --glow1: rgba(31,93,76,.18);
+  --glow2: rgba(31,93,76,.14);
+  --glow3: rgba(31,93,76,.12);
+
+  /* Hero highlight */
+  --fin-blue: #1F5D4C;
+  --fin-blue-dark: rgb(22,66,54);
+}
+
+/* Fonts & rendering */
+html, body{
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+html{ scroll-behavior: smooth; }
+
+/* Anchor offset for fixed header */
+section[id],
+[id]:where(section, div){
+  scroll-margin-top: 6rem;
+}
+
+/* ONE continuous background (no section seams) */
+body {
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(31,93,76,.04), transparent 60%),
+    radial-gradient(1000px 520px at 85% 20%, rgba(31,93,76,.04), transparent 65%),
+    radial-gradient(900px 500px at 50% 90%, rgba(31,93,76,.03), transparent 70%),
+    linear-gradient(
+      180deg,
+      #0b1220 0%,
+      #0d172a 35%,
+      #0f1e38 65%,
+      #0b1220 100%
+    );
+  background-attachment: fixed;
+}
+
+
+/* Subtle “flow” between sections (no hard lines) */
+section{ position: relative; }
+section::before{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:-44px;
+  height:88px;
+  pointer-events:none;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,.02), transparent);
+  opacity:.55;
+}
+
+/* Hero eyebrow + accent */
+.hero-eyebrow{
+  margin-bottom: .6rem;
+  font-size: .75rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(31,93,76,.95);
+}
+.hero-accent{ color: var(--fin-blue); }
+
+/* Hero badges */
+#hero .mt-8 > span{
+  background: rgba(31,93,76,.12) !important;
+  border-color: rgba(31,93,76,.35) !important;
+  color: rgba(226,232,240,.95) !important;
+}
+#hero .mt-8 > span:hover{
+  background: rgba(31,93,76,.18) !important;
+}
+
+/* Cards/tiles stay “elevated” on the new unified background */
+.rounded-2xl.border,
+.rounded-3xl.border,
+.shadow-card{
+  background: rgba(255,255,255,.06) !important;
+  border-color: rgba(255,255,255,.10) !important;
+}
+
+/* Small helper for your header divider + accents */
+.header-divider{
+  height: 1.5px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, var(--brand), transparent);
+}
+.link-accent{ color: var(--brand); }
+.btn-accent{ background-color: var(--brand); color:#fff; }
+
+/* ============ NAV & HEADER ACCENTS ============ */
+
+.header-divider{
+  height: 1.5px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, var(--brand), transparent);
+}
+
+.link-accent{
+  color: var(--brand);
+}
+
+.btn-accent{
+  background-color: var(--brand);
+  color: #ffffff;
+}
+
+
+.nav-active {
+  color: rgb(31 93 76) !important;
+  text-underline-offset: 10px;
+}
+
+/* ============ HERO VISUAL RECHTERKANT ============ */
+
+.hero-right {
+  max-width: 20rem;           /* iets smaller, meer ‘phone-card’ */
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .hero-right {
+    max-width: 22rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-right {
+    max-width: none;          /* op desktop gewoon ruimte pakken in grid */
+  }
+}
+
+.hero-media {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.85);
+}
+
+/* Formaat foto */
+.hero-media img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 520px;
+}
+
+@media (min-width: 768px) {
+  .hero-media img {
+    max-height: 560px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-media img {
+    max-height: 480px;
+  }
+}
+
+/* Quote box */
+.hero-quote {
+  position: absolute;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.4rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1.25rem;
+  background: rgba(15, 23, 42, 0.92); /* geen blur meer, gewoon donker */
+  color: #f9fafb;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.hero-quote p {
+  margin: 0;
+}
+
+.hero-quote p:last-child {
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+@media (min-width: 640px) {
+  .hero-quote {
+    left: 1.5rem;
+    right: auto;
+    max-width: 78%;
+    padding: 1.1rem 1.3rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-quote p:last-child {
+    font-size: 0.75rem;
+  }
+}
+
+/* 🔒 HARD OVERRIDE: hero mag NOOIT verstopt/geburnd worden */
+.hero-right,
+.hero-right *,
+.hero-media,
+.hero-media * {
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  will-change: auto !important;
+}
+
+/* ============ REVEAL ANIMATIONS ============ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-up {
+  transform: translateY(22px);
+}
+
+.reveal-left {
+  transform: translateX(-22px);
+}
+
+.reveal-right {
+  transform: translateX(22px);
+}
+
+.reveal-scale {
+  transform: scale(0.96);
+  transform-origin: 50% 60%;
+}
+
+/* ============ MODAL ANIMATIONS ============ */
+
+.modal-panel-enter {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+.modal-panel-enter.is-in {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.modal-backdrop-enter {
+  opacity: 0;
+}
+
+.modal-backdrop-enter.is-in {
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+/* ============ POLICY MODAL: TABS & ACCORDION ============ */
+
+.policy-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  color: #7FAE9A; /* brand-300 */
+}
+
+.tab-active {
+  background: rgba(31, 93, 76, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.accordion {
+  margin-top: 1rem;
+}
+
+.acc-btn {
+  width: 100%;
+  text-align: left;
+  margin: 0.5rem 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.03);
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.acc-btn:focus {
+  outline: 2px solid #1F5D4C;
+  outline-offset: 2px;
+}
+
+.acc-panel {
+  display: none;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid rgba(31, 93, 76, 0.6);
+  margin: 0.3rem 0 0.8rem 0.2rem;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0.5rem;
+}
+
+.acc-panel.open {
+  display: block;
+}
+
+
+/* ===========================
+   DESKTOP HERO VERGROTING
+   =========================== */
+
+/* Desktop vanaf 1024px */
+@media (min-width: 1024px) {
+
+  /* Maak de hele rechterkant breder */
+  .hero-right {
+    max-width: 28rem !important; /* was ~20 → nu groot & luxe */
+  }
+
+  /* Maak de card groter */
+  .hero-media {
+    border-radius: 2rem;
+    max-width: 100%;
+  }
+
+  /* Maak de foto zelf hoger/breder */
+  .hero-media img {
+    aspect-ratio: 16 / 12 !important; /* breder */
+    max-height: 600px !important;     /* hoger */
+    object-fit: cover;
+  }
+
+  /* Quote box position horizontaal iets ruimer */
+  .hero-quote {
+    left: 2rem !important;
+    max-width: 75% !important;
+    font-size: 1rem !important;
+    padding: 1.2rem 1.4rem !important;
+  }
+
+  .hero-quote p:last-child {
+    font-size: 0.85rem !important;
+  }
+}
+
+
+/* ============ WERKWIJZE STAPPEN ============ */
+/* ===========================
+   WERKWIJZE (nieuw / strak)
+   =========================== */
+
+/* =========================
+   WERKWIJZE (NIEUW)
+   ========================= */
+
+.werkwijze-grid{
+  display: grid;
+  gap: 18px;
+}
+
+/* 2 kolommen op desktop zoals in de screenshot */
+@media (min-width: 900px){
+  .werkwijze-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 26px;
+  }
+}
+
+.werkwijze-item{
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+
+  padding: 18px 18px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 18px 45px rgba(0,0,0,.22);
+
+  transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.werkwijze-item:hover{
+  transform: translateY(-2px);
+  border-color: rgba(31,93,76,.35);
+  background: rgba(255,255,255,.07);
+  box-shadow: 0 22px 55px rgba(0,0,0,.26);
+}
+
+.werkwijze-icon{
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(15,23,42,.85);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.25),
+    0 0 0 6px rgba(31,93,76,.10);
+  flex: 0 0 auto;
+}
+
+.werkwijze-icon svg{
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: rgba(226,232,240,.95);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.werkwijze-title{
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #f8fafc;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.werkwijze-tag{
+  font-size: .78rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(79,141,116,.14);
+  border: 1px solid rgba(79,141,116,.28);
+  color: rgba(127, 174, 154, .95);
+}
+
+.werkwijze-text{
+  margin-top: 6px;
+  font-size: .92rem;
+  line-height: 1.65;
+  color: rgba(226,232,240,.78);
+  max-width: 60ch;
+}
+
+/* mobiel iets compacter */
+@media (max-width: 480px){
+  .werkwijze-item{ padding: 16px 16px; border-radius: 16px; }
+  .werkwijze-icon{ width: 46px; height: 46px; }
+  .werkwijze-icon svg{ width: 21px; height: 21px; }
+  .werkwijze-text{ font-size: .9rem; }
+}
+
+/* ============ OVER ONS – LICHT ZAKELIJK ============ */
+
+/* Kleine label boven de kaart */
+.over-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(79, 141, 116, 0.08); /* brand-400/pine */
+  border: 1px solid rgba(79, 141, 116, 0.35);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(22, 66, 54);
+}
+
+/* Witte kaart met tekst */
+.over-card {
+  background: #ffffff;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.26); /* slate-400-ish */
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.16);
+  padding: 1.75rem 1.7rem;
+}
+
+@media (min-width: 768px) {
+  .over-card {
+    padding: 2.1rem 2rem;
+  }
+}
+
+/* Kleine pine-green bullets in de lijst */
+.over-bullet {
+  margin-top: 0.45rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: rgb(79 141 116); /* brand-400/pine */
+  box-shadow: 0 0 0 4px rgba(79, 141, 116, 0.18);
+}
+
+/* Stats onderin */
+.over-stats {
+  display: grid;
+  gap: 1.2rem;
+}
+
+@media (min-width: 640px) {
+  .over-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Foto-card rechts */
+.over-photo-wrap {
+  position: relative;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .over-photo-wrap {
+    max-width: 460px;
+  }
+}
+
+.over-photo-frame {
+  position: relative;
+  border-radius: 1.75rem;
+  padding: 0.3rem;
+  background: radial-gradient(circle at 0% 0%, rgba(79, 141, 116, 0.16), transparent 55%),
+              radial-gradient(circle at 100% 100%, rgba(79, 141, 116, 0.12), transparent 55%),
+              #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
+}
+
+.over-photo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.35rem;
+  object-fit: cover;
+}
+
+/* Label onder de foto */
+.over-photo-label {
+  position: absolute;
+  left: 0.9rem;
+  right: 0.9rem;
+  bottom: -0.8rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+}
+
+@media (min-width: 640px) {
+  .over-photo-label {
+    left: 1.3rem;
+    right: auto;
+    min-width: 70%;
+  }
+}
+
+
+
+/* ============ HERO BRAND BADGE (LOGO EXTRA ZICHTBAAR) ============ */
+
+.hero-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);            /* donker glas */
+  border: 1px solid rgba(148, 163, 184, 0.6);    /* slate-400-ish */
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.7); /* mooie glow */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-brand-text {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgb(148, 163, 184); /* slate-400 */
+}
+
+@media (min-width: 768px) {
+  .hero-brand-text {
+    font-size: 0.75rem;
+  }
+}
+/* ============================
+   Floating WhatsApp (clean)
+   ============================ */
+
+/* Zorg dat fixed écht fixed blijft (iOS Safari workaround) */
+#waFloat{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  font-family: inherit;
+
+  /* iOS/Chrome compositor: voorkomt rare scroll/position bugs */
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  will-change: transform;
+
+  /* kleine fade-in */
+  opacity: 1;
+}
+
+/* De ronde knop */
+#waFloat .wa-inner{
+  width: 60px;
+  height: 60px;
+  border-radius: 9999px;
+
+  display: grid;
+  place-items: center;
+
+  background: #25D366;
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.28),
+    0 0 0 6px rgba(37,211,102,.18);
+
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+/* Icon */
+#waFloat .wa-icon{
+  width: 28px;
+  height: 28px;
+  display: block;
+
+  /* werkt wél met <img> */
+  filter: brightness(0) invert(1);
+}
+
+/* Desktop hover/focus */
+@media (hover: hover) and (pointer: fine){
+  #waFloat:hover .wa-inner,
+  #waFloat:focus-visible .wa-inner{
+    transform: translateY(-2px) scale(1.04);
+    box-shadow:
+      0 18px 40px rgba(0,0,0,.32),
+      0 0 0 8px rgba(37,211,102,.22);
+    filter: saturate(1.1);
+  }
+}
+
+/* Tekst bubble */
+#waFloat .wa-bubble{
+  background: rgba(255,255,255,.96);
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+
+  padding: 10px 12px;
+  border-radius: 14px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  white-space: nowrap;
+
+  /* standaard verborgen */
+  opacity: 0;
+  transform: translateX(8px);
+  pointer-events: none;
+
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+/* Alleen op desktop laten zien bij hover/focus */
+@media (hover: hover) and (pointer: fine){
+  #waFloat:hover .wa-bubble,
+  #waFloat:focus-visible .wa-bubble{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobiel: bubble weg */
+@media (max-width: 767px){
+  #waFloat .wa-bubble{ display: none; }
+}
+
+/* Optioneel: als je JS gebruikt om te verbergen (bij footer etc.) */
+#waFloat.wa-hide{
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0,10px,0);
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+
+
+.footer-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  text-align:center;
+}
+.footer-copy{ color: rgba(226,232,240,.75); font-size: .9rem; }
+
+.footer-actions{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.footer-socials{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+
+.footer-legal{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.footer-link{
+  color: rgba(226,232,240,.75);
+  font-size: .9rem;
+  transition: color .18s ease;
+}
+.footer-link:hover{ color:#fff; }
+
+/* Social icons – strakker */
+.social-icon{
+  width: 44px;
+  height: 44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 10px 24px rgba(0,0,0,.28);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, filter .18s ease;
+  color: rgba(226,232,240,.92);
+}
+.social-icon:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.09);
+  border-color: rgba(31,93,76,.45);
+  filter: brightness(1.04);
+}
+.social-icon svg{
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Facebook & Instagram iets groter */
+.social-icon--lg svg{
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon:focus{
+  outline: 2px solid rgba(31,93,76,.9);
+  outline-offset: 3px;
+}
+
+
+@media (min-width: 1024px) {
+  /* Mobile: alles netjes onder elkaar */
+.footer-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  text-align:center;
+}
+
+.footer-copy{ color: rgba(226,232,240,.75); font-size: .9rem; }
+.footer-socials{ display:flex; align-items:center; justify-content:center; gap:10px; }
+.footer-legal{ display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+
+/* Desktop: links - midden - rechts (PRECIES wat jij wil) */
+@media (min-width: 1024px){
+  .footer-inner{
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items:center;
+    width:100%;
+    text-align:left;
+  }
+
+  .footer-copy{ justify-self:start; white-space:nowrap; }
+  .footer-socials{ justify-self:center; }
+  .footer-legal{ justify-self:end; white-space:nowrap; text-align:right; }
+}
+
+}
+
+
+
+/* ===== DIENSTEN VISUAL (rechts) ===== */
+.diensten-media{
+  position: sticky;
+  top: 110px;                 /* blijft lekker in beeld op desktop */
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(15,23,42,.92);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 22px 60px rgba(0,0,0,.35);
+}
+
+/* vaste vorm -> geen mega lange foto meer */
+.diensten-img{
+  position: relative;
+  aspect-ratio: 4 / 5;        /* mooi “poster” formaat */
+  width: 100%;
+}
+
+.diensten-img img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1.01);
+}
+
+/* subtiele donker gradient voor leesbaarheid */
+.diensten-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to top,
+    rgba(2,6,23,.65) 0%,
+    rgba(2,6,23,.15) 55%,
+    rgba(2,6,23,0) 100%
+  );
+  pointer-events:none;
+}
+
+/* Tag overlay strak en modern */
+.diensten-tag{
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  background: rgba(2,6,23,.72);
+  border: 1px solid rgba(255,255,255,.16);
+  color: rgba(226,232,240,.92);
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .02em;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* mobile: geen sticky + iets compacter */
+@media (max-width: 1023px){
+  .diensten-media{
+    position: relative;
+    top: auto;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .diensten-img{
+    aspect-ratio: 4 / 3;      /* mobiel minder hoog */
+  }
+  .diensten-tag{
+    left: 12px;
+    right: 12px;
+    text-align: center;
+  }
+}
+
+
+
+/* ===== Stats count-up + finish pop ===== */
+/* ===========================
+   STATS (Expertise) – V2 Rustiger
+   =========================== */
+
+#expertise .lg\:col-span-2.mt-6{
+  gap: 16px !important;
+}
+
+/* Stat card */
+#expertise .lg\:col-span-2.mt-6 > div{
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px !important;
+
+  background:
+    radial-gradient(900px 220px at 20% 0%, rgba(31,93,76,.12), transparent 60%),
+    radial-gradient(700px 200px at 85% 40%, rgba(31,93,76,.10), transparent 65%),
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+
+  border: 1px solid rgba(255,255,255,.11) !important;
+
+  box-shadow:
+    0 18px 46px rgba(2, 6, 23, .42),
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+  padding: 20px 18px !important;
+  text-align: center;
+
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+/* Zachte achtergrond lampjes */
+#expertise .lg\:col-span-2.mt-6 > div::before{
+  content:"";
+  position:absolute;
+  inset:-40px;
+  background:
+    radial-gradient(180px 140px at 18% 25%, rgba(31,93,76,.20), transparent 70%),
+    radial-gradient(160px 120px at 82% 55%, rgba(31,93,76,.16), transparent 70%);
+  filter: blur(10px);
+  opacity: .8;
+  pointer-events:none;
+}
+
+/* Onderlijn accent */
+#expertise .lg\:col-span-2.mt-6 > div::after{
+  content:"";
+  position:absolute;
+  left: 20%;
+  right: 20%;
+  bottom: 12px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(to right, transparent, rgba(31,93,76,.5), transparent);
+  opacity: .3;
+}
+
+/* Hover (desktop) */
+@media (hover:hover){
+  #expertise .lg\:col-span-2.mt-6 > div:hover{
+    transform: translateY(-1px);
+    border-color: rgba(31,93,76,.26) !important;
+    box-shadow:
+      0 22px 58px rgba(2, 6, 23, .5),
+      0 0 0 5px rgba(31,93,76,.08),
+      inset 0 1px 0 rgba(255,255,255,.06);
+  }
+}
+
+/* Cijfers */
+#expertise .lg\:col-span-2.mt-6 > div > div:first-child{
+  font-weight: 800 !important; /* minder dik */
+  letter-spacing: -0.03em !important;
+  line-height: 1 !important;
+
+  font-size: clamp(2.6rem, 3.6vw, 3.4rem) !important;
+
+  color: rgba(255,255,255,.95) !important;
+
+  text-shadow:
+    0 8px 20px rgba(0,0,0,.35),
+    0 0 18px rgba(31,93,76,.08);
+}
+
+/* Glow onder cijfer */
+#expertise .lg\:col-span-2.mt-6 > div > div:first-child::before{
+  content:"";
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -16px;
+  width: 70%;
+  height: 16px;
+  background: radial-gradient(ellipse at center, rgba(31,93,76,.32), transparent 70%);
+  filter: blur(8px);
+  opacity: .55;
+}
+
+/* Tekst */
+#expertise .lg\:col-span-2.mt-6 > div > p{
+  margin-top: 10px !important;
+  font-size: 0.95rem !important;
+  line-height: 1.55 !important;
+  color: rgba(226,232,240,.85) !important;
+  max-width: 38ch;
+  margin-inline: auto;
+}
+
+/* Eind-animatie */
+#expertise .lg\:col-span-2.mt-6 > div.stat-done{
+  border-color: rgba(31,93,76,.3) !important;
+  box-shadow:
+    0 24px 68px rgba(2, 6, 23, .55),
+    0 0 0 6px rgba(31,93,76,.1);
+}
+
+#expertise .lg\:col-span-2.mt-6 > div.stat-done > div:first-child{
+  animation: statPopSoft .45s ease both;
+}
+
+@keyframes statPopSoft{
+  0%   { transform: scale(1); }
+  45%  { transform: scale(1.045); }
+  100% { transform: scale(1); }
+}
+
+/* Mobiel */
+@media (max-width: 640px){
+  #expertise .lg\:col-span-2.mt-6 > div{
+    padding: 18px 16px !important;
+  }
+
+  #expertise .lg\:col-span-2.mt-6 > div > div:first-child{
+    font-size: clamp(2.4rem, 9vw, 3rem) !important;
+  }
+}
+
+
+/* =========================================
+   FINEXPERTS POLICY MODAL – FULL OVERRIDE
+   Plak ONDERAAN je CSS
+   ========================================= */
+
+/* 1) Backdrop achter de modal */
+#policyModal .modal-backdrop-enter{
+  background: rgba(2, 6, 23, .72) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* 2) Hele panel = 1 pine-green “sheet” */
+#policyModal .modal-panel-enter{
+  /* één premium pine-green achtergrond */
+  background:
+    radial-gradient(1100px 520px at 18% 10%, rgba(31,93,76,.22), transparent 58%),
+    radial-gradient(900px 460px at 88% 22%, rgba(31,93,76,.18), transparent 62%),
+    radial-gradient(700px 420px at 55% 95%, rgba(31,93,76,.10), transparent 60%),
+    linear-gradient(180deg, #0b1730 0%, #071226 55%, #050d1b 100%) !important;
+
+  border: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow:
+    0 38px 110px rgba(2,6,23,.85),
+    inset 0 1px 0 rgba(255,255,255,.06) !important;
+
+  border-radius: 22px !important;
+  color: rgba(226,232,240,.95) !important;
+
+  /* voorkomt “grijze/doorzichtige” plekken */
+  overflow: hidden;
+}
+
+/* 3) Header + footer moeten NIET eigen vlakjes worden */
+#policyModal .modal-panel-enter > .flex.items-center.justify-between,
+#policyModal .modal-panel-enter > .px-6.py-4{
+  background: transparent !important;
+}
+
+/* Extra zachte scheidingslijnen (niet te hard) */
+#policyModal .modal-panel-enter > .flex.items-center.justify-between{
+  border-bottom-color: rgba(255,255,255,.10) !important;
+}
+#policyModal .modal-panel-enter > .px-6.py-4{
+  border-top-color: rgba(255,255,255,.10) !important;
+}
+
+/* 4) Scroll content: moet ook “in hetzelfde vlak” vallen */
+#policyModal .modal-panel-enter > .max-h-\[70vh\]{
+  background: transparent !important;
+}
+
+/* 5) Belangrijk: geen individuele vakken binnenin */
+#policyModal .policy-panel{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* 6) Typografie leesbaar + strak */
+#policyModal h3,
+#policyModal h4{
+  color: rgba(255,255,255,.98) !important;
+}
+
+#policyModal p{
+  color: rgba(226,232,240,.88) !important;
+  line-height: 1.75 !important;
+}
+
+/* Subkoppen zoals “Artikel …” */
+#policyModal h5{
+  color: rgba(127,174,154,.92) !important; /* brand-300 vibe */
+  letter-spacing: .02em;
+}
+
+/* Links */
+#policyModal a{
+  color: rgba(127,174,154,.95) !important;
+}
+#policyModal a:hover{
+  color: rgba(169,201,187,.98) !important;
+}
+
+/* 7) Tabs container: iets strakker (maar nog steeds één modal-vlak) */
+#policyModal [role="tablist"]{
+  background: rgba(255,255,255,.06) !important;
+  border-color: rgba(255,255,255,.12) !important;
+}
+
+/* Tab buttons */
+#policyModal .policy-tab{
+  padding: .55rem .95rem;
+  border-radius: .85rem;
+  font-weight: 700;
+  color: rgba(226,232,240,.85);
+  transition: background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+
+#policyModal .policy-tab:hover{
+  background: rgba(31,93,76,.14);
+  color: rgba(255,255,255,.92);
+}
+
+#policyModal .policy-tab.tab-active{
+  background: rgba(31,93,76,.28) !important;
+  border: 1px solid rgba(31,93,76,.45);
+  color: #fff !important;
+  box-shadow:
+    0 10px 26px rgba(31,93,76,.22),
+    inset 0 1px 0 rgba(255,255,255,.10);
+}
+
+/* 8) Sluit (X) knop */
+#policyModal [data-close-modal]{
+  color: rgba(255,255,255,.90);
+}
+#policyModal button[data-close-modal]:hover{
+  background: rgba(255,255,255,.08) !important;
+}
+
+/* 9) Footer “Sluiten” knop (laat ‘m matchen met jouw theme) */
+#policyModal .modal-panel-enter > .px-6.py-4 button{
+  background: rgba(31,93,76,.26) !important;  /* matte pine-green */
+  color: rgba(255,255,255,.95) !important;
+  border: 1px solid rgba(31,93,76,.38) !important;
+  box-shadow: 0 14px 34px rgba(2,6,23,.45);
+  transition: transform .16s ease, background .16s ease, box-shadow .16s ease;
+}
+
+#policyModal .modal-panel-enter > .px-6.py-4 button:hover{
+  background: rgba(31,93,76,.34) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 44px rgba(2,6,23,.55), 0 0 0 6px rgba(31,93,76,.12);
+}
+
+
+
+
+
+/* =========================================================
+   FINEXPERTS — BLUE PRIMARY BUTTONS (ONLY 2 BUTTONS)
+   Plak onderaan je CSS
+   ========================================================= */
+
+/* HERO: Plan een kennismaking (meestal <a> of <button> met die tekst) */
+#hero a,
+#hero button{
+  /* niks overschrijven voor alle knoppen, dus we targetten hieronder specifieker */
+}
+
+/* Target specifiek op basis van tekst + fallback classes */
+#hero a[href*="kennis"],
+#hero a[href*="contact"],
+#hero a[href*="plan"],
+#hero button[data-plan],
+#hero .btn-primary,
+#hero a:has(span):where(:not(.btn-secondary)){}
+
+/* Beste & veilig: target op de exacte CTA-knop in hero.
+   -> Zet in HTML op die knop: class="btn-primary-fin"
+   Dan is het 100% stabiel. */
+.btn-primary-fin{
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+
+  padding: .95rem 1.25rem;
+  border-radius: 14px;
+
+  font-weight: 700;
+  letter-spacing: -0.01em;
+
+  color: rgba(255,255,255,.96) !important;
+
+  background: linear-gradient(180deg, rgba(31,93,76,1), rgba(22,66,54,1)) !important;
+  border: 1px solid rgba(31,93,76,.30) !important;
+
+  box-shadow:
+    0 18px 42px rgba(2, 6, 23, .55),
+    0 0 0 6px rgba(31,93,76,.10);
+
+  transition:
+    transform .18s ease,
+    filter .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease;
+}
+
+@media (hover:hover){
+  .btn-primary-fin:hover{
+    transform: translateY(-2px);
+    filter: brightness(1.03) saturate(1.03);
+    border-color: rgba(31,93,76,.50) !important;
+    box-shadow:
+      0 22px 55px rgba(2, 6, 23, .60),
+      0 0 0 8px rgba(31,93,76,.14);
+  }
+}
+.btn-primary-fin:active{
+  transform: translateY(0px) scale(.99);
+}
+.btn-primary-fin:focus-visible{
+  outline: none;
+  box-shadow:
+    0 22px 55px rgba(2, 6, 23, .60),
+    0 0 0 10px rgba(31,93,76,.18),
+    0 0 0 2px rgba(255,255,255,.18) inset;
+}
+
+/* FORM: Verstuur bericht (jouw form submit button) 
+   -> Zet in HTML op die knop: class="btn-primary-fin"
+   (zelfde class hergebruiken = 1 stijl overal) */
+
+/* Extra: als jouw submit nu Tailwind classes heeft die het breken,
+   dan pakt dit hem alsnog als het een submit is in jouw contact/plan sectie. */
+#contact button[type="submit"],
+#plan button[type="submit"],
+form button[type="submit"]{
+  /* alleen als je geen class wilt toevoegen */
+}
+
+#contact button[type="submit"]:not(.btn-secondary-fin):not(.btn-ghost-fin),
+#plan button[type="submit"]:not(.btn-secondary-fin):not(.btn-ghost-fin){
+  color: rgba(255,255,255,.96) !important;
+  background: linear-gradient(180deg, #1F5D4C, #1F5D4C) !important;
+  border: 1px solid rgba(31,93,76,.30) !important;
+
+  border-radius: 14px !important;
+  font-weight: 700 !important;
+
+  box-shadow:
+    0 18px 42px rgba(2, 6, 23, .55),
+    0 0 0 6px rgba(31,93,76,.10);
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+@media (hover:hover){
+  #contact button[type="submit"]:hover,
+  #plan button[type="submit"]:hover{
+    transform: translateY(-2px);
+    filter: brightness(1.03) saturate(1.03);
+    border-color: rgba(31,93,76,.50) !important;
+    box-shadow:
+      0 22px 55px rgba(2, 6, 23, .60),
+      0 0 0 8px rgba(31,93,76,.14);
+  }
+}
+
+h2.font-display.text-3xl {
+  color: #1F5D4C;
+}
+
+
+.form-eyebrow{
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #1f5d4c; /* rgb(14 165 233) */
+}
+
+
+.photo-frame {
+  width: 360px;              /* smaller & cleaner */
+  max-width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+.photo-img {
+  width: 500px;
+  height: 700px;              /* behoud volledige foto */
+  display: block;
+}
+
+
+/* ===== MINI SERVICES (bovenste 4 kaarten) ===== */
+
+.service-mini-card{
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.02)
+  );
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 20px;
+  padding: 22px 24px;
+  box-shadow: 0 20px 50px rgba(2,6,23,.45);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.service-mini-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(2,6,23,.6);
+}
+
+/* kopregel met nummer */
+.service-mini-head{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+/* nummer (zelfde vibe als diensten) */
+.service-mini-index{
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  color: #4F8D74; /* zelfde pine-green */
+  border: 1px solid rgba(79,141,116,.35);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+/* titel – zelfde font als Onze diensten */
+.service-mini-title{
+  font-family: inherit; /* zelfde als diensten */
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* tekst */
+.service-mini-text{
+  font-size: .95rem;
+  color: #cbd5f5;
+  line-height: 1.5;
+}
+
+/* mobiel iets compacter */
+@media (max-width: 768px){
+  .service-mini-card{
+    padding: 18px 20px;
+  }
+}

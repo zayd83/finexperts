@@ -1,0 +1,190 @@
+/* =========================
+   FINEXPERTS — EDITORIAL BASE
+   ========================= */
+
+:root {
+  --paper: #F3F4F1;
+  --surface: #FBFBF9;
+  --ink: #17201C;
+  --ink-muted: #56605A;
+  --line: #DADDD6;
+
+  --brand-50: #EEF2F7;
+  --brand-100: #D8E1EC;
+  --brand-200: #B3C4D8;
+  --brand-300: #84A0BF;
+  --brand-400: #4F739A;
+  --brand-500: #2E5077;
+  --brand-600: #1E3A5F;
+  --brand-700: #152B47;
+  --brand-800: #0F2036;
+  --brand-900: #0B1826;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Spectral', serif;
+}
+
+::selection {
+  background: var(--brand-300);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-600);
+  outline-offset: 2px;
+}
+
+/* Safety-net knoppen (werken los van Tailwind-utilities) */
+.btn-primary {
+  background: var(--brand-600);
+  color: #fff;
+  transition: background .18s;
+}
+.btn-primary:hover {
+  background: var(--brand-700);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  transition: .18s;
+}
+.btn-ghost:hover {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+/* Sticky header: iets steviger bij scroll */
+header.scrolled {
+  border-bottom-color: var(--ink);
+  box-shadow: 0 1px 0 rgba(23, 32, 28, .06);
+}
+
+/* Kleine ingekaderde foto (geen full-bleed) — duotone hover-effect */
+.framed-photo {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.framed-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(.35) contrast(1.05);
+  transition: filter .4s ease;
+}
+.framed-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--brand-700);
+  mix-blend-mode: multiply;
+  opacity: .35;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
+.framed-photo:hover img {
+  filter: none;
+}
+.framed-photo:hover::after {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .framed-photo img,
+  .framed-photo::after {
+    transition: none;
+  }
+}
+
+/* Policy-modal: tabs + open/close transitie */
+.policy-tab {
+  padding: .5rem 1rem;
+  font-size: .8125rem;
+  border-radius: 2px;
+  color: var(--ink-muted);
+  transition: background .15s, color .15s;
+}
+.policy-tab.tab-active {
+  background: var(--brand-600);
+  color: #fff;
+}
+.modal-backdrop-enter {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.modal-backdrop-enter.is-in {
+  opacity: 1;
+}
+.modal-panel-enter {
+  opacity: 0;
+  transform: translateY(8px) scale(.98);
+  transition: opacity .2s ease, transform .2s ease;
+}
+.modal-panel-enter.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Zwevende WhatsApp-knop */
+.floating-whatsapp {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: .7rem 1.1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, .3), 0 8px 10px -6px rgba(0, 0, 0, .2);
+  transition: background .18s, opacity .2s, transform .2s;
+}
+.floating-whatsapp:hover {
+  background: #1EBE5D;
+}
+.floating-whatsapp.wa-hide {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+.wa-bubble {
+  font-size: .8rem;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  white-space: nowrap;
+}
+.wa-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wa-icon {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 640px) {
+  .wa-bubble {
+    display: none;
+  }
+}

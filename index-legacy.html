@@ -1,0 +1,1684 @@
+<html lang="nl">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE5FLTRTVL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YE5FLTRTVL');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FinExperts — Administratie, Advies &amp; Belastingen</title>
+
+    <meta name="description"
+        content="Fin Experts: administratie, strategisch advies en belastingen voor MKB en ZZP. Modern, duidelijk en persoonlijk.">
+    <link rel="icon" href="assets/img/favicon.png">
+
+    <!-- Tailwind config (eigen kleuren / fonts) -->
+    <script src="assets/js/tailwind-config.js"></script>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@600;700;800&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v12">
+
+    <!-- GSAP (optioneel, voor later) -->
+    <script defer="" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- Main JS -->
+    <script defer="" src="assets/js/main.js"></script>
+</head>
+
+<body class="font-sans bg-paper text-ink selection:bg-brand-300 selection:text-ink" dir="ltr"
+    spellcheck="true" style="direction: ltr; min-height: 159px;" data-new-gr-c-s-check-loaded="14.1267.0"
+    data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1267.0">
+    <!-- Achtergrond mesh -->
+    <div class="fixed inset-0 -z-100 bg-mesh"></div>
+
+    <!-- ================= HEADER ================= -->
+    <!-- HEADER -->
+    <header class="fixed inset-x-0 top-0 z-50 bg-white border-b border-line shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+            <!-- LOGO -> terug naar hero -->
+            <a href="#hero" class="flex items-center gap-3">
+                <img src="assets/img/Logo Transparency 1.png" alt="Fin Experts"
+                    class="h-14 w-auto drop-shadow-[0_1px_4px_rgba(0,0,0,0.15)]">
+            </a>
+
+            <!-- DESKTOP LINKS -->
+            <div class="hidden md:flex items-center gap-6 font-medium">
+                <a href="#expertise" class="transition hover:opacity-80 link-accent">Onze expertise</a>
+                <a href="#diensten" class="transition hover:opacity-80 link-accent">Diensten</a>
+                <a href="#werkwijze" class="transition hover:opacity-80 link-accent">Werkwijze</a>
+                <a href="#over" class="transition hover:opacity-80 link-accent">Over ons</a>
+                <a href="#contact" class="transition hover:opacity-80 link-accent">Contact</a>
+
+                <a href="#contact"
+                    class="ml-2 inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold shadow transition btn-accent">
+                    Plan kennismaking
+                </a>
+            </div>
+
+            <!-- HAMBURGER -->
+            <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-brand-50" aria-label="Menu">
+                <svg class="w-7 h-7 text-black" viewBox="0 0 24 24" fill="none" stroke="black">
+                    <path stroke-linecap="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- dunne blauwe lijn -->
+        <div class="header-divider"></div>
+
+        <!-- MOBIEL MENU -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-line shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 py-3 space-y-1 text-base">
+                <a href="#expertise"
+                    class="block px-2 py-2.5 rounded-lg font-medium transition hover:bg-brand-50 link-accent">
+                    Onze expertise
+                </a>
+
+                <a href="#diensten"
+                    class="block px-2 py-2.5 rounded-lg font-medium transition hover:bg-brand-50 link-accent">
+                    Diensten
+                </a>
+                <a href="#werkwijze"
+                    class="block px-2 py-2.5 rounded-lg font-medium transition hover:bg-brand-50 link-accent">
+                    Werkwijze
+                </a>
+                <a href="#over"
+                    class="block px-2 py-2.5 rounded-lg font-medium transition hover:bg-brand-50 link-accent">
+                    Over ons
+                </a>
+                <a href="#contact"
+                    class="block px-2 py-2.5 rounded-lg font-medium transition hover:bg-brand-50 link-accent">
+                    Contact
+                </a>
+
+                <a href="#contact"
+                    class="mt-2 inline-flex items-center justify-center rounded-xl px-4 py-2.5 font-semibold w-full transition btn-accent">
+                    Plan kennismaking
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero-section relative pt-28 pb-20">
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+
+            <div class="reveal reveal-up">
+                <p class="hero-eyebrow reveal reveal-up">JOUW FINANCIËLE PARTNER</p>
+
+                <h1
+                    class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink reveal reveal-up">
+                    Jouw betrouwbare partner in <span class="hero-accent">financiële deskundigheid</span>
+                </h1>
+
+
+                <p class="mt-5 text-lg sm:text-xl text-ink-muted max-w-3xl mx-auto">
+                    Administratie, belastingen en advies — helder, zorgvuldig en proactief. Voor <span
+                        class="text-ink font-semibold">ZZP</span> en <span class="text-ink font-semibold">MKB</span>
+                    in heel Nederland.
+                </p>
+            </div>
+
+            <!-- Badges -->
+            <div class="mt-8 flex flex-wrap justify-center gap-3 reveal reveal-up">
+                <span
+                    class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-ink-muted text-sm hover:bg-white/10 transition">
+                    24/7 bereikbaar
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-ink-muted text-sm hover:bg-white/10 transition">
+                    16+ jaar ervaring
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-ink-muted text-sm hover:bg-white/10 transition">
+                    FinExperts
+                </span>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-10 flex flex-wrap justify-center gap-4 reveal reveal-up">
+                <a href="#contact" class="btn-primary-fin">
+                    Plan een kennismaking
+                </a>
+
+                <a href="#diensten"
+                    class="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-7 py-3 text-base font-semibold text-white hover:bg-[rgba(59,130,246,.12)] transition">
+                    Onze diensten
+                </a>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- INZICHT / GRIP OP JE CIJFERS -->
+    <section id="expertise" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-2 items-center">
+
+            <!-- Tekst -->
+            <div class="reveal reveal-left">
+                <p class="text-sm font-semibold tracking-[0.18em] uppercase text-cyan-300">Onze expertise</p>
+                <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold text-white">
+                    Complete ondersteuning op administratief en strategisch vlak.
+                </h2>
+                <p class="mt-4 text-ink-muted max-w-xl">
+                    Van administratie en belastingaangiften tot strategisch advies: u heeft één betrouwbare partner die
+                    meedenkt, vooruitkijkt en rust brengt in uw cijfers.
+                </p>
+            </div>
+
+            <!-- Foto -->
+            <!-- Foto -->
+            <div class="reveal reveal-right flex justify-end">
+                <div class="photo-frame">
+                    <img src="assets/img/foto3.jpg" alt="Overleg en samenwerking bij FinExperts" class="photo-img">
+                </div>
+            </div>
+
+
+
+
+            <!-- Kaarten -->
+            <div class="lg:col-span-2 mt-2 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+
+                <article class="reveal service-mini-card">
+                    <div class="service-mini-head">
+                        <span class="service-mini-index">01</span>
+                        <h3 class="service-mini-title">FinExperts Administratie</h3>
+                    </div>
+                    <p class="service-mini-text">
+                        Betrouwbare administratie als fundament.
+                    </p>
+                </article>
+
+                <article class="reveal service-mini-card">
+                    <div class="service-mini-head">
+                        <span class="service-mini-index">02</span>
+                        <h3 class="service-mini-title">FinExperts Advies</h3>
+                    </div>
+                    <p class="service-mini-text">
+                        Strategisch financieel advies en sparringpartner.
+                    </p>
+                </article>
+
+                <article class="reveal service-mini-card">
+                    <div class="service-mini-head">
+                        <span class="service-mini-index">03</span>
+                        <h3 class="service-mini-title">FinExperts Belastingen</h3>
+                    </div>
+                    <p class="service-mini-text">
+                        Fiscale zekerheid en optimale benutting van regelingen.
+                    </p>
+                </article>
+
+                <article class="reveal service-mini-card">
+                    <div class="service-mini-head">
+                        <span class="service-mini-index">04</span>
+                        <h3 class="service-mini-title">FinExperts Consultancy</h3>
+                    </div>
+                    <p class="service-mini-text">
+                        Consultancy, outsourcing en duurzame ondersteuning.
+                    </p>
+                </article>
+
+            </div>
+
+            <!-- Stats -->
+            <div class="lg:col-span-2 mt-6 grid gap-4 sm:grid-cols-3">
+                <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+                    <div class="stat-number" data-target="85" data-suffix="%">0%</div>
+
+                    <p class="mt-1 text-ink-muted text-sm">Ondernemers ervaren meer rust door administratieve
+                        ontzorging.</p>
+                </div>
+                <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+                    <div class="stat-number" data-target="62" data-suffix="%">0%</div>
+
+                    <p class="mt-1 text-ink-muted text-sm">Maakt actief gebruik van belastingoptimalisatie.</p>
+                </div>
+                <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+                    <div class="stat-number" data-target="78" data-suffix="%">0%</div>
+
+                    <p class="mt-1 text-ink-muted text-sm">Wil maandelijks inzicht in cijfers en voortgang.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- overgang naar volgende sectie -->
+    <div class="h-14 bg-gradient-to-b from-transparent to-white/5"></div>
+
+
+    <!-- ================= DIENSTEN ================= -->
+    <section id="diensten" class="py-20">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)] gap-12 items-start">
+
+            <!-- LINKERKANT: intro + 4 diensten -->
+            <div>
+                <!-- Intro -->
+                <div class="max-w-3xl">
+                    <p class="text-sm font-semibold tracking-[0.18em] uppercase text-brand-400">
+                        Onze diensten
+                    </p>
+                    <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold text-white">
+                        Complete ondersteuning op administratief, fiscaal en strategisch vlak
+                    </h2>
+                    <p class="mt-3 text-ink-muted">
+                        Wij bieden een totaalpakket aan financiële en fiscale dienstverlening:
+                        van administratief beheer en jaarrekeningen tot strategisch advies,
+                        belastingzaken en consultancy. Zo heeft u één betrouwbare partner
+                        voor alle financiële processen binnen uw onderneming.
+                    </p>
+                </div>
+
+                <!-- 4 blokken (inhoud 1-op-1 jouw tekst) -->
+                <div class="mt-8 grid gap-6 md:grid-cols-2">
+                    <!-- 01. FinExperts Administratie -->
+                    <article
+                        class="rounded-2xl border border-white/10 bg-surface/70 p-6 shadow-card flex flex-col h-full">
+                        <div
+                            class="inline-flex items-center gap-2 text-xs font-semibold text-brand-600 uppercase tracking-[0.2em]">
+                            <span
+                                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-500/10 border border-brand-500/40 text-[0.7rem]">
+                                01
+                            </span>
+                            FinExperts Administratie
+                        </div>
+                        <h3 class="mt-3 text-lg font-semibold text-ink">
+                            Betrouwbare administratie als fundament
+                        </h3>
+                        <p class="mt-3 text-sm text-ink-muted">
+                            Een betrouwbare administratie is de basis van elk gezond bedrijf.
+                            Toch kost het ondernemers vaak veel tijd en energie. Wij nemen uw
+                            volledige administratie uit handen, zodat u zich kunt richten op groei
+                            en strategie.
+                        </p>
+
+                        <div class="mt-4 text-sm text-ink-muted space-y-1">
+                            <p class="font-semibold text-ink">Wat wij voor u doen:</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Inkoop- en verkoopadministratie</li>
+                                <li>Bankverwerking en betalingsstromen</li>
+                                <li>Debiteuren- en crediteurenbeheer</li>
+                                <li>Salarisadministratie</li>
+                                <li>Tussentijdse cijfers en periodieke rapportages</li>
+                                <li>Jaarrekeningen opstellen conform de richtlijnen</li>
+                                <li>Publicatiestukken voor de KvK opstellen en deponeren</li>
+                                <li>Digitaliseren en automatiseren van administratieve processen</li>
+                            </ul>
+                        </div>
+
+                        <p class="mt-4 text-sm font-semibold text-emerald-300 border-t border-white/5 pt-3">
+                            Uw voordeel:<br>
+                            <span class="font-normal text-emerald-100">
+                                Altijd inzicht in actuele cijfers, zekerheid dat alles correct en
+                                tijdig wordt verwerkt en de vrijheid om u te richten op ondernemen.
+                            </span>
+                        </p>
+                    </article>
+
+                    <!-- 02. FinExperts Advies -->
+                    <article
+                        class="rounded-2xl border border-white/10 bg-surface/70 p-6 shadow-card flex flex-col h-full">
+                        <div
+                            class="inline-flex items-center gap-2 text-xs font-semibold text-brand-600 uppercase tracking-[0.2em]">
+                            <span
+                                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-500/10 border border-brand-500/40 text-[0.7rem]">
+                                02
+                            </span>
+                            FinExperts Advies
+                        </div>
+                        <h3 class="mt-3 text-lg font-semibold text-ink">
+                            Strategisch financieel advies en sparringpartner
+                        </h3>
+                        <p class="mt-3 text-sm text-ink-muted">
+                            Wij gaan verder dan het netjes bijhouden van de administratie. Wij zijn
+                            uw sparringpartner in financiële vraagstukken en denken proactief mee
+                            over de toekomst van uw onderneming.
+                        </p>
+
+                        <div class="mt-4 text-sm text-ink-muted space-y-1">
+                            <p class="font-semibold text-ink">Wat wij bieden:</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Analyse van bedrijfsresultaten, trends en KPI’s</li>
+                                <li>Cashflowmanagement en liquiditeitsprognoses</li>
+                                <li>Begrotingen, investeringsanalyses en businesscases</li>
+                                <li>Procesoptimalisatie (efficiënter werken, lagere kosten, betere structuur)</li>
+                                <li>Strategische begeleiding bij groei, investeringen of herstructurering</li>
+                            </ul>
+                        </div>
+
+                        <p class="mt-4 text-sm font-semibold text-emerald-300 border-t border-white/5 pt-3">
+                            Uw voordeel:<br>
+                            <span class="font-normal text-emerald-100">
+                                Wij vertalen cijfers naar duidelijke inzichten en concrete acties.
+                                U neemt betere beslissingen, stuurt doelgerichter en bouwt met
+                                vertrouwen aan de toekomst.
+                            </span>
+                        </p>
+                    </article>
+
+                    <!-- 03. FinExperts Belastingen -->
+                    <article
+                        class="rounded-2xl border border-white/10 bg-surface/70 p-6 shadow-card flex flex-col h-full">
+                        <div
+                            class="inline-flex items-center gap-2 text-xs font-semibold text-brand-600 uppercase tracking-[0.2em]">
+                            <span
+                                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-500/10 border border-brand-500/40 text-[0.7rem]">
+                                03
+                            </span>
+                            FinExperts Belastingen
+                        </div>
+                        <h3 class="mt-3 text-lg font-semibold text-ink">
+                            Fiscale zekerheid en optimale benutting van regelingen
+                        </h3>
+                        <p class="mt-3 text-sm text-ink-muted">
+                            Belastingen zijn een complex en voortdurend veranderend vakgebied.
+                            Met onze kennis van fiscaliteiten zorgen wij dat u niets over het
+                            hoofd ziet en optimaal gebruikmaakt van fiscale regelingen en voordelen.
+                        </p>
+
+                        <div class="mt-4 text-sm text-ink-muted space-y-1">
+                            <p class="font-semibold text-ink">Wat wij doen:</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Aangiften omzetbelasting (btw)</li>
+                                <li>Aangiften inkomstenbelasting</li>
+                                <li>Aangifte vennootschapsbelasting</li>
+                                <li>Aangifte dividendbelasting</li>
+                                <li>Aangifte loonheffing</li>
+                                <li>Controle en begeleiding bij belastingcontroles</li>
+                                <li>Fiscale structuur- en ondernemingsadvies</li>
+                            </ul>
+                        </div>
+
+                        <p class="mt-4 text-sm font-semibold text-emerald-300 border-t border-white/5 pt-3">
+                            Uw voordeel:<br>
+                            <span class="font-normal text-emerald-100">
+                                Geen zorgen over deadlines of fouten, altijd voldoen aan de
+                                wet- en regelgeving, en nooit meer betalen dan nodig.
+                            </span>
+                        </p>
+                    </article>
+
+                    <!-- 04. FinExperts Consultancy -->
+                    <article
+                        class="rounded-2xl border border-white/10 bg-surface/70 p-6 shadow-card flex flex-col h-full">
+                        <div
+                            class="inline-flex items-center gap-2 text-xs font-semibold text-brand-600 uppercase tracking-[0.2em]">
+                            <span
+                                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-500/10 border border-brand-500/40 text-[0.7rem]">
+                                04
+                            </span>
+                            FinExperts Consultancy
+                        </div>
+                        <h3 class="mt-3 text-lg font-semibold text-ink">
+                            Consultancy, outsourcing en tijdelijke ondersteuning
+                        </h3>
+                        <p class="mt-3 text-sm text-ink-muted">
+                            Naast onze kernservices ondersteunen wij ondernemers en organisaties
+                            breed met consultancy- en interimdiensten.
+                        </p>
+
+                        <div class="mt-4 text-sm text-ink-muted space-y-1">
+                            <p class="font-semibold text-ink">Waar wij u bij helpen:</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Strategisch advies – samen ontwikkelen we een toekomstbestendige koers</li>
+                                <li>Financiële optimalisatie – inzicht in kansen, risico’s en verbeterpunten</li>
+                                <li>Volledige outsourcing van de financiële administratie</li>
+                                <li>Tijdelijke ondersteuning bij piekdrukte, ziekteverzuim of vacatures</li>
+                            </ul>
+                        </div>
+
+                        <p class="mt-4 text-sm font-semibold text-emerald-300 border-t border-white/5 pt-3">
+                            Uw voordeel:<br>
+                            <span class="font-normal text-emerald-100">
+                                FinExperts Consultancy is uw brede en betrouwbare financiële partner:
+                                van dagelijkse administratie tot strategisch advies op directieniveau.
+                            </span>
+                        </p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- RECHTERKANT: visual -->
+            <div class="mt-8 lg:mt-0">
+                <div class="diensten-media">
+                    <div class="diensten-img">
+                        <img src="assets/img/foto100.jpeg"
+                            alt="Team van FinExperts aan het werk in een moderne kantooromgeving." loading="lazy">
+                    </div>
+
+                    <div class="diensten-tag">
+                        Administratie · Belastingen · Advies · Consultancy
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="werkwijze" class="section-soft py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+                    Wat is onze werkwijze?
+                </h2>
+                <div class="mx-auto mt-4 h-[2px] w-32 bg-gradient-to-r from-transparent via-sky-400 to-transparent">
+                </div>
+                <p class="mt-5 text-ink-muted">
+                    Wij brengen structuur en helderheid in jouw onderneming!
+                </p>
+            </div>
+
+            <!-- Grid -->
+            <div class="mt-12 werkwijze-grid">
+                <!-- 1 Kennismaking -->
+                <article class="werkwijze-item">
+                    <div class="werkwijze-icon" aria-hidden="true">
+                        <!-- Tabler: Message -->
+                        <div class="werkwijze-icon" aria-hidden="true">
+                            <!-- Tabler: Message User -->
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 9h8M8 13h5
+         M12 18c4.42 0 8-3.13 8-7
+         s-3.58-7-8-7-8 3.13-8 7
+         c0 2.39 1.28 4.54 3.3 5.95L7 21l4.2-2.1
+         c.27.03.53.1.8.1Z"></path>
+                            </svg>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="werkwijze-body">
+                        <h3 class="werkwijze-title">Kennismaking</h3>
+                        <p class="werkwijze-text">
+                            De eerste stap is een persoonlijke kennismaking. We plannen een vrijblijvend gesprek waarin
+                            we samen jouw situatie, wensen en behoeften in kaart brengen.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 2 Aanmelden -->
+                <article class="werkwijze-item">
+                    <div class="werkwijze-icon" aria-hidden="true">
+                        <!-- monitor -->
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 5h16v10H4zM9 19h6M12 15v4"></path>
+                        </svg>
+                    </div>
+                    <div class="werkwijze-body">
+                        <h3 class="werkwijze-title">Aanmelden</h3>
+                        <p class="werkwijze-text">
+                            Na je aanmelding gaan wij direct aan de slag met het opzetten van je account en het
+                            inrichten van je administratie. We begeleiden je stap voor stap, zodat je snel kunt starten.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 3 Introductie (video) -->
+                <article class="werkwijze-item">
+                    <div class="werkwijze-icon" aria-hidden="true">
+                        <!-- headphones / intro -->
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M4 13v3a3 3 0 0 0 3 3h1v-8H7a3 3 0 0 0-3 3Zm16 0v3a3 3 0 0 1-3 3h-1v-8h1a3 3 0 0 1 3 3ZM6 12a6 6 0 1 1 12 0">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="werkwijze-body">
+                        <h3 class="werkwijze-title">Introductie <span class="werkwijze-tag">(video)</span></h3>
+                        <p class="werkwijze-text">
+                            Je krijgt van ons een duidelijke instructie<span
+                                id="jodit-selection_marker_1766232697579_6969017360064675" data-jodit-temp="true"
+                                data-jodit-selection_marker="start" style="line-height: 0; display: none;">﻿</span> met
+                            een heldere uitleg over welke gegevens en documenten wij van je nodig hebben.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 4 Digitaal aanleveren -->
+                <article class="werkwijze-item">
+                    <div class="werkwijze-icon" aria-hidden="true">
+                        <!-- file -->
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 3h7l3 3v15H7zM14 3v3h3M9 11h6M9 15h6"></path>
+                        </svg>
+                    </div>
+                    <div class="werkwijze-body">
+                        <h3 class="werkwijze-title">Digitaal aanleveren</h3>
+                        <p class="werkwijze-text">
+                            Via onze software kun je eenvoudig facturen, documenten, bonnen en foto’s uploaden, zowel
+                            via onze website als via de app. Snel, overzichtelijk en gebruiksvriendelijk.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 5 Herinnering -->
+                <article class="werkwijze-item">
+                    <div class="werkwijze-icon" aria-hidden="true">
+                        <!-- list -->
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 6h14M7 12h14M7 18h14M3 6h1M3 12h1M3 18h1"></path>
+                        </svg>
+                    </div>
+                    <div class="werkwijze-body">
+                        <h3 class="werkwijze-title">Herinneringen</h3>
+                        <p class="werkwijze-text">
+                            Wij bewaken belangrijke deadlines zoals belastingaangiftes, deponeringen en andere
+                            wettelijke verplichtingen en sturen tijdig duidelijke herinneringen. Zo weet je precies waar
+                            je aan toe bent en kom je niet voor verrassingen te staan.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 6 Vast contactpersoon -->
+                <article class="werkwijze-item">
+                    <div class="werkwijze-icon" aria-hidden="true">
+                        <!-- chat bubble -->
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 5h16v10H7l-3 3zM8 9h8M8 12h6"></path>
+                        </svg>
+                    </div>
+                    <div class="werkwijze-body">
+                        <h3 class="werkwijze-title">Vast contactpersoon</h3>
+                        <p class="werkwijze-text">
+                            Je hebt een vaste contactpersoon die je 24/7 kunt bereiken via WhatsApp. Zo heb je altijd
+                            direct contact en staan wij klaar wanneer je ons nodig hebt.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- ================= OVER ================= -->
+    <!-- ================= OVER ONS ================= -->
+    <section id="over" class="section-soft py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] items-center">
+
+                <!-- LINKERKANT: tekst in lichte kaart -->
+                <div>
+                    <p class="text-sm font-semibold tracking-[0.18em] uppercase text-brand-400">
+                        Over ons
+                    </p>
+
+                    <div class="over-card mt-3">
+                        <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold text-ink">
+                            FinExperts in het kort
+                        </h2>
+
+
+                        <p class="mt-4 text-ink-muted leading-relaxed">
+                            FinExperts wordt gevormd door twee partners met een achtergrond in
+                            <strong>bedrijfseconomie</strong> en <strong>accountancy</strong>. Met ruim
+                            <strong>16 jaar ervaring</strong> in de financiële wereld ondersteunen wij
+                            ondernemers bij hun administratie, fiscale vragen en strategische keuzes.
+                        </p>
+
+                        <p class="mt-3 text-ink-muted leading-relaxed">
+                            We combineren de zorgvuldigheid van een traditioneel kantoor met de snelheid
+                            en transparantie van een moderne, digitale aanpak. U heeft altijd één vast
+                            aanspreekpunt die uw cijfers én uw onderneming kent.
+                        </p>
+
+                        <ul class="mt-5 space-y-2 text-ink-muted">
+                            <li class="flex gap-2">
+                                <span class="over-bullet"></span>
+                                <span>Big-Five ervaring met jaarrekeningen, fiscaliteiten en compliance.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="over-bullet"></span>
+                                <span>Ervaring met projectcontrol, begrotingen en financieel management.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="over-bullet"></span>
+                                <span>Focus op duidelijke rapportages en praktisch toepasbaar advies.</span>
+                            </li>
+                        </ul>
+
+                        <!-- Kleine stats onderin kaart -->
+                        <div class="over-stats mt-6 pt-4 border-t border-line">
+                            <div>
+                                <p class="text-xs font-semibold tracking-[0.16em] text-sky-500 uppercase">Ervaring</p>
+                                <p class="text-lg font-semibold text-ink">16+ jaar</p>
+                                <p class="text-xs text-ink-muted">Financiële &amp; fiscale praktijk</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold tracking-[0.16em] text-sky-500 uppercase">Samenwerking
+                                </p>
+                                <p class="text-lg font-semibold text-ink">2 partners</p>
+                                <p class="text-xs text-ink-muted">Korte lijntjes, vaste aanspreekpunten</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold tracking-[0.16em] text-sky-500 uppercase">Focus</p>
+                                <p class="text-lg font-semibold text-ink">MKB &amp; ZZP</p>
+                                <p class="text-xs text-ink-muted">Randstad en daarbuiten</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RECHTERKANT: foto in nette lichte kaart -->
+                <div class="relative">
+                    <div class="over-photo-wrap">
+                        <div class="over-photo-frame">
+                            <img src="assets/img/AdobeStock_489008861.jpeg"
+                                alt="FinExperts aan het werk in een moderne kantooromgeving." class="over-photo-img"
+                                loading="lazy">
+                        </div>
+
+                        <div class="over-photo-label">
+                            <p class="text-xs font-semibold text-ink">
+                                FinExperts · Administratie · Belastingen · Advies
+                            </p>
+                            <p class="text-[11px] text-ink-muted mt-0.5">
+                                Persoonlijk contact, duidelijke taal en heldere rapportages.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1fr,520px] gap-12 items-start">
+
+            <!-- LINKERKANT: Tekst + knoppen -->
+            <div class="reveal reveal-up">
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+                    Plan een kennismaking
+                </h2>
+                <p class="mt-3 text-white/70">
+                    Bel, WhatsApp of stuur een bericht via het formulier — we reageren snel.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <!-- WhatsApp -->
+                    <a id="waBtn"
+                        href="https://wa.me/31630036108?text=Hallo%20Fin%20Experts%2C%20ik%20wil%20graag%20een%20kennismaking%20plannen."
+                        target="_blank" rel="noreferrer" data-phone="31630036108"
+                        class="inline-flex items-center justify-center rounded-xl bg-[#25D366] text-white px-6 py-3 font-semibold shadow hover:bg-[#1ebe5d] transition relative z-10 active:scale-[0.98] hover:shadow-lg">
+                        WhatsApp ons
+                    </a>
+
+                    <!-- E-mail -->
+                    <a id="emailBtn"
+                        href="mailto:info@finexperts.nl?subject=Kennismaking&amp;body=Hallo%20FinExperts%2C%20ik%20wil%20graag%20meer%20informatie%20ontvangen."
+                        data-to="info@finexperts.nl"
+                        class="inline-flex items-center justify-center rounded-xl border border-white/15 text-white px-5 py-3 font-semibold hover:bg-white/10 transition relative z-10 active:scale-[0.98] hover:shadow-lg cursor-pointer select-none">
+                        E-mail
+                    </a>
+                </div>
+
+                <div class="mt-8 space-y-3 text-white/70">
+                    <div class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white/50" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
+                        <a href="tel:+31630036108" class="hover:text-white transition">+31 6 300 36 108</a>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white/50" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        <a href="mailto:info@finexperts.nl" class="hover:text-white transition">info@finexperts.nl</a>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white/50" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span>Regio Randstad, Nederland</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- RECHTERKANT: formulier -->
+            <!-- RECHTERKANT: subtitle + formulier -->
+            <!-- RECHTERKANT: subtitle + formulier -->
+            <div class="reveal reveal-up lg:sticky lg:top-24">
+
+                <!-- Subtitle boven formulier -->
+                <p class="form-eyebrow mb-3">VRAAG EEN OFFERTE AAN</p>
+
+                <form action="https://formspree.io/f/mvgewlwl" method="POST"
+                    class="rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6 space-y-4 backdrop-blur-sm shadow-card">
+
+                    <div>
+                        <label class="block text-white/70 text-sm mb-1">Naam</label>
+                        <input required="" type="text" name="name"
+                            class="w-full rounded-xl bg-surface/60 border border-white/10 px-4 py-3 text-ink placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:border-brand-600 focus:ring-brand-600"
+                            placeholder="Uw naam">
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-white/70 text-sm mb-1">E-mail</label>
+                            <input required="" type="email" name="email"
+                                class="w-full rounded-xl bg-surface/60 border border-white/10 px-4 py-3 text-ink placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:border-brand-600 focus:ring-brand-600"
+                                placeholder="uw@voorbeeld.nl">
+                        </div>
+
+                        <div>
+                            <label class="block text-white/70 text-sm mb-1">Telefoon</label>
+                            <input type="tel" name="phone"
+                                class="w-full rounded-xl bg-surface/60 border border-white/10 px-4 py-3 text-ink placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:border-brand-600 focus:ring-brand-600"
+                                placeholder="+31 6 12 34 56 78">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-white/70 text-sm mb-1">Bericht</label>
+                        <textarea required="" name="message" rows="4"
+                            class="w-full rounded-xl bg-surface/60 border border-white/10 px-4 py-3 text-ink placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:border-brand-600 focus:ring-brand-600"
+                            placeholder="Vertel kort waar we je mee kunnen helpen..."></textarea>
+                    </div>
+
+                    <input type="hidden" name="_subject" value="Nieuw bericht via Fin Experts website">
+
+                    <div class="pt-2">
+                        <button type="submit" class="btn-primary-fin">Verstuur bericht</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="relative z-[60] border-t border-white/10 py-10" style="pointer-events:auto">
+        <div class="w-full px-6 lg:px-10">
+            <div class="footer-inner">
+                <p class="footer-copy">© <span id="year"></span> FinExperts. Alle rechten voorbehouden.</p>
+
+                <div class="footer-socials" aria-label="Socials">
+                    <a class="social-icon" href="https://www.linkedin.com/company/fin-experts/?viewAsMember=true"
+                        target="_blank" rel="noopener noreferrer" aria-label="FinExperts op LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.4 8.1H4.6V24H.4V8.1Zm7.2 0h4V10.3h.06c.56-1.06 1.94-2.18 4-2.18 4.28 0 5.07 2.82 5.07 6.48V24h-4.2v-8.16c0-1.94-.03-4.43-2.7-4.43-2.7 0-3.11 2.11-3.11 4.29V24H7.6V8.1Z">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <a class="social-icon social-icon--lg" href="https://www.facebook.com/FinExperts" target="_blank"
+                        rel="noopener noreferrer" aria-label="FinExperts op Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M22 12a10 10 0 1 0-11.56 9.88v-7H7.9v-2.88h2.54V9.8c0-2.5 1.5-3.88 3.8-3.88 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56v1.88h2.76l-.44 2.88h-2.32v7A10 10 0 0 0 22 12Z">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <a class="social-icon social-icon--lg" href="https://www.instagram.com/finexperts_/" target="_blank"
+                        rel="noopener noreferrer" aria-label="FinExperts op Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 4.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2Zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2ZM18 7.3a.9.9 0 1 1-.9-.9.9.9 0 0 1 .9.9Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="footer-legal">
+                    <button id="btnPrivacy" type="button" class="footer-link">Privacy</button>
+                    <button id="btnTerms" type="button" class="footer-link">Algemene voorwaarden</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- ========= Gecombineerde modal ========= -->
+    <div id="policyModal" class="modal fixed inset-0 z-[9999] hidden items-center justify-center" role="dialog"
+        aria-modal="true" aria-labelledby="policyTitle" tabindex="-1">
+
+        <!-- Backdrop -->
+        <div class="modal-backdrop-enter absolute inset-0 z-10 bg-black/60" data-close-modal=""></div>
+
+        <!-- Panel wrapper -->
+        <div class="relative z-20 mx-auto my-6 w-[92%] max-w-4xl pointer-events-none">
+            <div
+                class="modal-panel-enter pointer-events-auto rounded-2xl border border-white/10 bg-surface text-ink shadow-2xl">
+                <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
+                    <h3 id="policyTitle" class="text-xl font-semibold">Beleid</h3>
+                    <button type="button" class="p-2 rounded-lg hover:bg-white/10" aria-label="Sluiten"
+                        data-close-modal="">✕</button>
+                </div>
+
+                <!-- Tabs -->
+                <div class="px-6 pt-4">
+                    <div role="tablist" aria-label="Beleid tabs"
+                        class="inline-flex rounded-xl border border-white/10 p-1 bg-white/5">
+                        <button type="button" role="tab" class="policy-tab tab-active" data-tab="privacy"
+                            aria-selected="true">
+                            Privacy
+                        </button>
+                        <button type="button" role="tab" class="policy-tab" data-tab="terms" aria-selected="false">
+                            Voorwaarden
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Panels -->
+                <div class="max-h-[70vh] overflow-y-auto px-6 py-5 space-y-10">
+                    <!-- PRIVACY -->
+                    <section class="policy-panel" id="policy-privacy" role="tabpanel" aria-labelledby="privacy-tab">
+                        <h4 class="text-lg font-semibold text-ink mb-4">Privacyverklaring FinExperts</h4>
+
+                        <p class="text-ink-muted mb-4">
+                            FinExperts neemt uw privacy serieus en is verantwoordelijk voor de verwerking van
+                            persoonsgegevens
+                            zoals weergegeven in deze online privacyverklaring. Wij werken volgens de richtlijnen van de
+                            Algemene
+                            Verordening Gegevensbescherming (AVG).
+                        </p>
+
+                        <p class="text-ink-muted mb-4">
+                            Wij verwerken persoonsgegevens van de Klant wanneer de Klant gebruik maakt van onze website,
+                            diensten
+                            en/of omdat de Klant deze gegevens zelf aan ons verstrekt.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">1. Doel</h5>
+                        <p class="text-ink-muted mb-2">
+                            FinExperts verwerkt persoonsgegevens voor de volgende doelen:
+                        </p>
+                        <p class="text-ink-muted mb-1">- Om vragen te kunnen beantwoorden</p>
+                        <p class="text-ink-muted mb-1">- Om een voorstel te kunnen doen</p>
+                        <p class="text-ink-muted mb-1">- Om diensten te kunnen leveren</p>
+                        <p class="text-ink-muted mb-4">
+                            Als wij hier wettelijk toe verplicht zijn, zoals gegevens die vereist zijn voor de
+                            belastingaangiften
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">2. Grondslagen voor verwerking</h5>
+                        <p class="text-ink-muted mb-2">
+                            De verwerking van persoonsgegevens is gebaseerd op de volgende grondslagen:
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            - De gegevensverwerking is noodzakelijk voor de uitvoering van een overeenkomst.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            - De gegevensverwerking is noodzakelijk voor het nakomen van een wettelijke verplichting.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            - De gegevensverwerking is mogelijk door toestemming van de betrokken persoon.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">3. Bewaren van persoonsgegevens</h5>
+                        <p class="text-ink-muted mb-4">
+                            FinExperts bewaart persoonsgegevens niet langer dan strikt noodzakelijk is voor de doelen
+                            die wij in deze
+                            verklaring noemen of om te voldoen aan wettelijke (bewaar) verplichtingen, zoals gegevens
+                            voor de
+                            Belastingdienst. Wij proberen zo min mogelijk gegevens te verwerken.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">4. Delen van persoonsgegevens met derden</h5>
+                        <p class="text-ink-muted mb-4">
+                            FinExperts verkoopt persoonsgegevens niet aan derden en zal deze uitsluitend verstrekken
+                            indien dit
+                            noodzakelijk is voor de uitvoering van de overeenkomst of om te voldoen aan een wettelijke
+                            verplichting.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">5. Privacy rechten</h5>
+                        <p class="text-ink-muted mb-3">
+                            U heeft een aantal rechten met betrekking tot de persoonsgegevens die wij verwerken:
+                        </p>
+                        <p class="text-ink-muted mb-1">- Het recht om persoonsgegevens in te zien.</p>
+                        <p class="text-ink-muted mb-1">- Het recht om persoonsgegevens te wijzigen en aan te vullen.</p>
+                        <p class="text-ink-muted mb-1">- Het recht om vergeten te worden.</p>
+                        <p class="text-ink-muted mb-1">- Het recht om persoonsgegevens over te dragen.</p>
+                        <p class="text-ink-muted mb-1">
+                            - Het recht op het beperken van een verwerking van persoonsgegevens.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            - Het rechte op een menselijke blik bij besluiten.
+                        </p>
+                        <p class="text-ink-muted mb-3">- Het recht om bezwaar te maken.</p>
+
+                        <p class="text-ink-muted mb-4">
+                            Wilt u een van deze rechten uitoefenen, neem dan contact met ons op via de contactpagina of
+                            e-mail.
+                        </p>
+
+                        <p class="text-ink-muted mb-4">
+                            FinExperts wijst en tevens op dat de Klant ten alle tijde de mogelijkheid heeft om een
+                            klacht in te dienen
+                            bij de Autoriteit Persoonsgegevens. Voor aanvullende informatie verwijzen wij naar de
+                            website van de
+                            Autoriteit Persoonsgegevens:
+                            <a href="https://autoriteitpersoonsgegevens.nl" class="text-brand-300 underline"
+                                target="_blank" rel="noopener noreferrer">
+                                https://autoriteitpersoonsgegevens.nl
+                            </a>.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">6. Beveiliging van persoonsgegevens</h5>
+                        <p class="text-ink-muted mb-4">
+                            FinExperts neemt de bescherming van persoonsgegevens serieus en neemt passende
+                            beveiligingsmaatregelen om te voorkomen dat iemand ongeoorloofde toegang tot uw
+                            persoonsgegevens
+                            krijgt of deze kan aanpassen, openbaar kan maken of ervoor kan zorgen dat de
+                            persoonsgegevens verloren
+                            gaan.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            FinExperts doet uiterste zijn best om de persoonsgegevens zo goed mogelijk te beveiligen.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            Heeft u na het lezen van deze privacyverklaring nog vragen over de bescherming van uw
+                            persoonsgegevens? Neem dan contact met ons op.
+                        </p>
+                    </section>
+
+                    <!-- VOORWAARDEN (UPDATED CONTENT) -->
+                    <section class="policy-panel hidden" id="policy-terms" role="tabpanel" aria-labelledby="terms-tab">
+                        <h4 class="text-lg font-semibold text-ink mb-4">
+                            Algemene voorwaarden FinExperts
+                        </h4>
+
+                        <p class="text-ink-muted mb-2">
+                            Administratie- Advies-Belastingen<br>
+                            E-mail: info@FinExperts.nl<br>
+                            Website: www.FinExperts.nl
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 1 - Definities</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. FinExperts- Administratie | Advies | Belastingen: FinExperts, gevestigd te Dordrecht,
+                            KvK-nummer 97548537.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Klant: degene met wie FinExperts- Administratie | Advies | Belastingen een overeenkomst
+                            is aangegaan.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. Partijen: FinExperts- Administratie | Advies | Belastingen en Klant samen.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            4. Consument: een Klant die tevens een individu is en die als privépersoon handelt.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 2 - Toepasselijkheid</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. Deze voorwaarden zijn van toepassing op alle offertes, aanbiedingen, werkzaamheden,
+                            bestellingen,
+                            overeenkomsten en leveringen van diensten of producten door of namens FinExperts.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. FinExperts en de Klant kunnen alleen afwijken van deze voorwaarden als dat schriftelijk
+                            is afgesproken.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            3. FinExperts en de Klant sluiten de toepasselijkheid van de algemene voorwaarden van de
+                            Klant of van anderen
+                            uitdrukkelijk uit.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 3 - Aanbiedingen en offertes</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. Aanbiedingen en offertes van FinExperts zijn vrijblijvend, tenzij daarin uitdrukkelijk
+                            anders vermeld.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Een aanbod of offerte is maximaal 30 dagen geldig, tenzij er een andere termijn in het
+                            aanbod of de offerte staat.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. Aanvaardt de Klant een aanbod of offerte niet binnen de geldende termijn, dan vervalt het
+                            aanbod of de offerte.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            4. Aanbiedingen en offertes gelden niet voor nabestellingen, tenzij FinExperts en de Klant
+                            dit schriftelijk
+                            afspreken.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 4 - Aanvaarding</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. Bij aanvaarding van een vrijblijvende offerte of aanbieding, mag FinExperts de offerte of
+                            het aanbod alsnog binnen
+                            14 dagen na ontvangst van de aanvaarding intrekken, zonder dat de Klant hieraan enige
+                            rechten kan ontlenen.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            2. Mondelinge aanvaarding van de Klant verbindt FinExperts slechts, nadat de Klant deze
+                            schriftelijk of
+                            elektronisch heeft bevestigd.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 5 - Prijzen</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. FinExperts hanteert prijzen in euro’s, exclusief btw en exclusief eventuele overige
+                            kosten zoals administratie- of
+                            verzendkosten, tenzij schriftelijk anders is afgesproken.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. FinExperts mag de prijzen van zijn diensten en producten op zijn website en in andere
+                            uitingen altijd wijzigen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. FinExperts en de Klant spreken voor een dienstverlening een totaalbedrag als richtprijs
+                            af, tenzij schriftelijk
+                            anders wordt afgesproken.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            4. FinExperts mag tot 10% van de richtprijs afwijken.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            5. FinExperts moet de Klant op tijd laten weten waarom een hogere prijs gerechtvaardigd is,
+                            wanneer de
+                            richtprijs meer dan 10% hoger uit gaat vallen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            6. De Klant mag het deel van de opdracht dat boven de richtprijs (vermeerderd met 10%)
+                            uitkomt laten vervallen,
+                            wanneer de richtprijs meer dan 10% hoger uit gaat vallen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            7. FinExperts mag de prijzen jaarlijks aanpassen.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            8. FinExperts zal prijsaanpassingen meedelen aan de Klant voorafgaand aan de ingang
+                            ervan.<br>
+                            9. Een consument mag de overeenkomst met FinExperts opzeggen wanneer hij het niet eens is
+                            met de prijsverhoging
+                            met een maandopzegtermijn.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 6 - Betalingen en betalingstermijn</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. FinExperts mag bij het aangaan van de overeenkomst een aanbetaling tot 50% van het
+                            afgesproken bedrag
+                            verlangen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. De Klant moet een betaling achteraf binnen 14 dagen na levering hebben voldaan.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. De betalingstermijnen die FinExperts hanteert, zijn fatale betalingstermijnen. Dat
+                            betekent dat indien de Klant het
+                            afgesproken bedrag niet uiterlijk op de laatste dag van de betalingstermijn heeft betaald,
+                            hij automatisch in
+                            verzuim en in gebreke is, zonder dat FinExperts aan de Klant een aanmaning hoeft te sturen
+                            of in gebreke hoeft te
+                            stellen.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            4. FinExperts mag een levering afhankelijk stellen van onmiddellijke betaling dan wel een
+                            zekerheidstelling
+                            eisen voor het totale bedrag van de diensten of producten.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 7 - Gevolgen te late betaling</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. Betaalt de Klant niet binnen de afgesproken termijn, dan mag FinExperts de wettelijke
+                            rente van 8% per maand
+                            voor handelstransacties in rekening brengen vanaf de dag dat de Klant in verzuim is, waarbij
+                            een gedeelte van een
+                            maand voor een hele maand wordt gerekend.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Wanneer de Klant in verzuim is, moet hij bovendien buitengerechtelijke incassokosten en
+                            eventuele
+                            schadevergoeding betalen aan FinExperts.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. De incassokosten worden berekend aan de hand van het Besluit vergoeding voor
+                            buitengerechtelijke incassokosten.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            4. Wanneer de Klant niet op tijd betaalt, mag FinExperts zijn verplichtingen opschorten
+                            totdat de Klant heeft betaald.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            5. In geval van liquidatie, faillissement, beslag of surseance van betaling aan de zijde van
+                            de Klant, zijn de vorderingen
+                            van FinExperts op de Klant onmiddellijk opeisbaar.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            6. Weigert de Klant zijn medewerking aan de uitvoering van de overeenkomst door FinExperts,
+                            dan moet hij nog
+                            steeds de afgesproken prijs betalen.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 8 - Opschortingsrecht</h5>
+                        <p class="text-ink-muted mb-4">
+                            1. De Klant doet hierbij afstand van het recht om de nakoming van enige uit deze
+                            overeenkomst voortvloeiende
+                            verbintenis op te schorten.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 9 - Verrekening</h5>
+                        <p class="text-ink-muted mb-4">
+                            1. De Klant doet afstand van zijn recht om een schuld aan FinExperts te verrekenen met een
+                            vordering op
+                            FinExperts.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 10 - Verzekering</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De Klant moet de volgende zaken voldoende verzekeren en verzekerd houden tegen
+                            onder andere brand, ontploffings- en waterschade, en diefstal:
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            geleverde zaken die noodzakelijk zijn voor de uitvoering van de onderliggende
+                            overeenkomst<br>
+                            zaken van FinExperts die bij de Klant aanwezig zijn<br>
+                            zaken die onder eigendomsvoorbehoud zijn geleverd
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            2. De Klant geeft op eerste verzoek van FinExperts de polis van deze verzekeringen ter
+                            inzage.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 11 - Garantie</h5>
+                        <p class="text-ink-muted mb-4">
+                            1. Wanneer de Klant en FinExperts een overeenkomst met een dienstverlenend karakter zijn
+                            aangegaan, bevat
+                            deze voor FinExperts enkel een inspanningsverplichting en dus geen resultaatsverplichting.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 12 - Uitvoering van de overeenkomst
+                        </h5>
+                        <p class="text-ink-muted mb-1">
+                            1. FinExperts voert de overeenkomst naar beste inzicht en vermogen en volgens de eisen van
+                            goed vakmanschap uit.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. FinExperts mag de afgesproken dienstverlening in zijn geheel of deels laten uitvoeren
+                            door anderen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. De uitvoering van de overeenkomst gebeurt in overleg en na een schriftelijk akkoord en
+                            betaling van een eventueel
+                            voorschot door de Klant.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            4. De Klant moet ervoor zorgen dat FinExperts op tijd kan beginnen aan de uitvoering van de
+                            overeenkomst.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            5. Zorgt de Klant er niet voor dat FinExperts tijdig kan beginnen, dan komen de daaruit
+                            voortvloeiende
+                            extra kosten voor rekening van de Klant.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 13 - Informatieverstrekking door de
+                            Klant</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De Klant stelt alle informatie, gegevens en bescheiden die relevant zijn voor de correcte
+                            uitvoering van de
+                            overeenkomst tijdig en in gewenste vorm en op gewenste wijze beschikbaar aan FinExperts.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. De Klant staat in voor de juistheid en volledigheid van de ter beschikking gestelde
+                            informatie, gegevens en
+                            bescheiden, ook indien deze van derden afkomstig zijn, voor zover uit de aard van de
+                            overeenkomst niet anders
+                            voortvloeit.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. Wanneer en voor zover de Klant dit verzoekt, retourneert FinExperts de betreffende
+                            bescheiden.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            4. Stelt de Klant niet, niet tijdig of niet behoorlijk de door FinExperts redelijkerwijs
+                            verlangde informatie, gegevens of
+                            bescheiden beschikbaar en loopt de uitvoering van de overeenkomst hierdoor vertraging op,
+                            dan komen de daaruit
+                            voortvloeiende extra kosten en extra uren voor rekening van de Klant.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 14 - Duur overeenkomst dienst</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De overeenkomst tussen FinExperts en de Klant betreffende een dienst of diensten wordt
+                            aangegaan voor
+                            onbepaalde tijd, tenzij uit de aard van de overeenkomst iets anders voortvloeit of anders
+                            wordt afgesproken.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            2. Wanneer de Klant een overeenkomst voor bepaalde tijd aangaat, dan wordt deze na afloop
+                            van de termijn
+                            stilzwijgend omgezet in een overeenkomst voor onbepaalde tijd, tenzij één van de partijen de
+                            overeenkomst opzegt
+                            met inachtneming van een opzegtermijn van 2 maanden, of een consument de overeenkomst opzegt
+                            met
+                            inachtneming van een opzegtermijn van 1 maand, waardoor de overeenkomst automatisch eindigt.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 15 - Opzeggen dienst voor onbepaalde
+                            tijd</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De Klant kan een overeenkomst voor een dienst voor onbepaalde tijd opzeggen met een
+                            opzegtermijn van 2 maanden.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            2. Een consument mag een overeenkomst voor een dienst voor onbepaalde tijd opzeggen met een
+                            opzegtermijn van 1 maand.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 16 - Geheimhouding</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De Klant houdt iedere informatie, in welke vorm dan ook, die hij van FinExperts ontvangt
+                            geheim.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Hetzelfde geldt voor alle andere informatie betreffende FinExperts waarvan de Klant weet
+                            of redelijkerwijs kan vermoeden
+                            dat deze geheim of vertrouwelijk is, dan wel waarvan hij kan verwachten dat verspreiding
+                            ervan FinExperts schade kan berokkenen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. De Klant neemt alle nodige maatregelen om ervoor te zorgen dat hij de informatie in lid 1
+                            en 2 geheimhoudt.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            4. De in dit artikel omschreven geheimhoudingsplicht geldt niet voor informatie:
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            die al openbaar was voordat de Klant deze informatie vernam of die later openbaar is
+                            geworden zonder dat
+                            dit het gevolg was van een schending van de geheimhoudingsplicht van de Klant
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            die door de Klant openbaar gemaakt wordt op grond van een wettelijke plicht
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            5. De in dit artikel omschreven geheimhoudingsplicht geldt voor de duur van de onderliggende
+                            overeenkomst en voor
+                            een periode van 3 jaar na afloop daarvan.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 17 - Boetebeding</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. Wanneer de Klant het artikel over geheimhouding of intellectueel eigendom overtreedt, dan
+                            moet hij aan
+                            FinExperts voor elke overtreding een onmiddellijk opeisbare boete betalen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Is de Klant een consument dan bedraagt de boete in lid 1: € 1.000.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. Is de Klant geen consument dan bedraagt de boete in lid 1: € 5.000.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            4. Daarnaast moet de Klant een bedrag van 5% van het toepasselijke bedrag in lid 2 of 3
+                            betalen voor elke dag dat die
+                            overtreding voortduurt.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            5. De Klant moet de boete in lid 1 betalen zonder dat een ingebrekestelling of gerechtelijke
+                            procedure nodig is. Ook
+                            hoeft er geen sprake te zijn van schade.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            6. FinExperts mag naast de boete in lid 1 ook een schadevergoeding eisen van de Klant.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 18 - Vrijwaring</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De Klant vrijwaart FinExperts tegen alle aanspraken van anderen die verband houden met de
+                            door FinExperts
+                            geleverde producten en/of diensten.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. De Klant vrijwaart FinExperts volledig voor alle aanspraken, naheffingen, correcties,
+                            boetes, renten, kosten,
+                            sancties of andere maatregelen van overheidsinstanties (waaronder begrepen, maar niet
+                            beperkt tot, de
+                            Belastingdienst, UWV en andere toezichthoudende of uitvoerende organen) die direct of
+                            indirect verband
+                            houden met of voortvloeien uit:
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            a. door of namens de Klant verstrekte gegevens, informatie of documenten;
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            b. door FinExperts uitgevoerde werkzaamheden op basis van door de Klant aangeleverde
+                            gegevens; of
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            c. nalatigheid of onjuiste naleving door de Klant van wettelijke verplichtingen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. De Klant is te allen tijde zelf verantwoordelijk voor het tijdig, juist en volledig
+                            voldoen van alle belastingen,
+                            heffingen, afdrachten en overige verplichtingen jegens overheidsinstanties, tenzij
+                            uitdrukkelijk en schriftelijk
+                            anders is overeengekomen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            4. Indien naar aanleiding van een boekenonderzoek, controle of herziening door een
+                            overheidsinstantie (zoals de
+                            Belastingdienst) naheffingen, boetes of correcties worden opgelegd die (mede) het gevolg
+                            zijn van door de Klant
+                            verstrekte onjuiste, onvolledige of niet-tijdig aangeleverde informatie, komen alle daaruit
+                            voortvloeiende
+                            financiële en juridische gevolgen volledig voor rekening van de Klant.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            5. De vrijwaring zoals bedoeld in dit artikel strekt zich tevens uit tot alle redelijke
+                            kosten van juridische en/of
+                            administratieve bijstand, gemaakt door FinExperts in verband met de verdediging tegen of
+                            behandeling van
+                            dergelijke aanspraken, controles of onderzoeken.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            6. Deze bepaling blijft ook na beëindiging van de overeenkomst tussen partijen onverminderd
+                            van kracht.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 19 - Klachten</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De Klant moet een door FinExperts geleverd product of verleende dienst zo snel mogelijk
+                            onderzoeken op eventuele tekortkomingen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Beantwoordt een geleverd product of verleende dienst niet aan dat wat de Klant
+                            redelijkerwijs mocht verwachten,
+                            dan moet de Klant FinExperts daarvan op de hoogte stellen binnen 1 maand na het vaststellen
+                            van de tekortkoming.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. Een consument moet uiterlijk binnen 2 maanden na het vaststellen van de tekortkoming
+                            FinExperts hiervan op
+                            de hoogte stellen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            4. De Klant geeft daarbij een zo gedetailleerd mogelijke omschrijving van de tekortkoming,
+                            zodat
+                            FinExperts hierop gepast kan reageren.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            5. De Klant moet aantonen dat de klacht betrekking heeft op een overeenkomst tussen de Klant
+                            en FinExperts.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            6. Wanneer een klacht gaat over lopende werkzaamheden, dan kan de Klant niet eisen dat
+                            FinExperts andere
+                            werkzaamheden gaat verrichten dan is afgesproken.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 20 - Ingebrekestelling</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De Klant moet een eventuele ingebrekestelling schriftelijk kenbaar maken aan FinExperts.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            2. De Klant is ervoor verantwoordelijk dat zijn ingebrekestelling FinExperts ook
+                            daadwerkelijk op tijd bereikt.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 21 - Aansprakelijkheid Klant</h5>
+                        <p class="text-ink-muted mb-4">
+                            1. Wanneer FinExperts een overeenkomst aangaat met meerdere Klanten, is ieder van hen
+                            hoofdelijk
+                            aansprakelijk voor het nakomen van de afspraken in die overeenkomst.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 22 - Aansprakelijkheid FinExperts</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. FinExperts is alleen aansprakelijk voor schade die de Klant lijdt wanneer die schade is
+                            veroorzaakt door
+                            opzet of bewuste roekeloosheid.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Wanneer FinExperts aansprakelijk is voor schade, dan geldt dat alleen voor directe schade
+                            die verband houdt met
+                            de uitvoering van een onderliggende overeenkomst.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. FinExperts is niet aansprakelijk voor indirecte schade, zoals gevolgschade, gederfde
+                            winst of schade aan derden.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            4. Wanneer FinExperts aansprakelijk is, is deze aansprakelijkheid beperkt tot het bedrag dat
+                            door een gesloten
+                            (beroeps)aansprakelijkheidsverzekering wordt uitbetaald. Is er geen verzekering gesloten of
+                            wordt geen
+                            schadebedrag uitgekeerd, dan is de aansprakelijkheid beperkt tot het (gedeelte van het)
+                            factuurbedrag waarop de
+                            aansprakelijkheid betrekking heeft.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            5. Alle afbeeldingen, foto’s, kleuren, tekeningen, omschrijvingen op de website of in een
+                            catalogus zijn slechts
+                            indicatief en kunnen niet leiden tot enige vergoeding, ontbinding of opschorting.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 23 - Vervaltermijn</h5>
+                        <p class="text-ink-muted mb-4">
+                            1. Elk recht van de Klant op schadevergoeding van FinExperts vervalt 12 maanden na de
+                            gebeurtenis waaruit de
+                            aansprakelijkheid direct of indirect voortvloeit. Hiermee wordt niet uitgesloten het
+                            bepaalde in artikel 6:89 BW.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 24 - Ontbinding</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De Klant mag de overeenkomst ongedaan maken wanneer FinExperts toerekenbaar
+                            tekortschiet in de nakoming van zijn verplichtingen, tenzij deze tekortkoming de
+                            ontbinding niet rechtvaardigt vanwege haar bijzondere aard of geringe betekenis.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Is de nakoming van de verplichtingen door FinExperts nog mogelijk, dan kan ontbinding pas
+                            plaatsvinden nadat
+                            FinExperts in verzuim is.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            3. FinExperts mag de overeenkomst met de Klant ongedaan maken, wanneer de Klant zijn
+                            verplichtingen uit de
+                            overeenkomst niet volledig of niet tijdig nakomt, dan wel wanneer FinExperts kennis heeft
+                            genomen van
+                            omstandigheden die hem goede grond geven om aan te nemen dat de Klant zijn verplichtingen
+                            niet zal nakomen.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 25 - Overmacht</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. In aanvulling op artikel 6:75 BW geldt dat een tekortkoming van FinExperts door de Klant
+                            niet aan FinExperts kan
+                            worden toegerekend wanneer er sprake is van overmacht.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Onder de overmachtsituatie in lid 1 valt onder meer ook:
+                        </p>
+                        <p class="text-ink-muted mb-1">- een noodtoestand zoals een burgeroorlog of natuurramp</p>
+                        <p class="text-ink-muted mb-1">- wanprestatie of overmacht van toeleveranciers, bezorgers of
+                            anderen</p>
+                        <p class="text-ink-muted mb-1">- stroom-, elektriciteits- internet-, computer- of
+                            telecomstoringen</p>
+                        <p class="text-ink-muted mb-1">- computer-virussen</p>
+                        <p class="text-ink-muted mb-1">- stakingen</p>
+                        <p class="text-ink-muted mb-1">- overheidsmaatregelen</p>
+                        <p class="text-ink-muted mb-1">- vervoersproblemen</p>
+                        <p class="text-ink-muted mb-1">- slechte weersomstandigheden</p>
+                        <p class="text-ink-muted mb-4">- werkonderbrekingen</p>
+
+                        <p class="text-ink-muted mb-1">
+                            3. Wanneer zich een overmachtsituatie voordoet waardoor FinExperts 1 of meer verplichtingen
+                            naar de Klant niet
+                            kan nakomen, dan worden die verplichtingen opgeschort totdat FinExperts kan nakomen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            4. Vanaf het moment dat een overmachtsituatie ten minste 30 kalenderdagen heeft geduurd,
+                            mogen zowel de Klant als
+                            FinExperts de overeenkomst schriftelijk in zijn geheel of deels ongedaan maken.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            5. FinExperts hoeft in een overmachtsituatie geen vergoeding aan de Klant te betalen, ook
+                            niet wanneer FinExperts
+                            hiervan voordeel heeft.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 26 - Wijziging overeenkomst</h5>
+                        <p class="text-ink-muted mb-4">
+                            1. Wanneer het voor de uitvoering ervan nodig is om een gesloten overeenkomst te wijzigen,
+                            kunnen de Klant en
+                            FinExperts de overeenkomst aanpassen.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 27 - Wijziging algemene voorwaarden
+                        </h5>
+                        <p class="text-ink-muted mb-1">
+                            1. FinExperts mag deze algemene voorwaarden wijzigen.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            2. Wijzigingen van ondergeschikt belang mag FinExperts altijd doorvoeren.
+                        </p>
+                        <p class="text-ink-muted mb-1">
+                            3. Ingrijpende wijzigingen zal FinExperts zoveel mogelijk vooraf met de Klant bespreken.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            4. Een consument mag bij een ingrijpende wijziging van de algemene voorwaarden de
+                            onderliggende overeenkomst
+                            opzeggen.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 28 - Overgang van rechten</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. De Klant kan geen rechten uit een overeenkomst met FinExperts aan anderen
+                            overdragen zonder schriftelijke toestemming van FinExperts.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            2. Deze bepaling geldt als een beding met goederenrechtelijke werking zoals in artikel
+                            3:83 lid 2 BW.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 29 - Gevolgen nietigheid of
+                            vernietigbaarheid</h5>
+                        <p class="text-ink-muted mb-1">
+                            1. Wanneer 1 of meerdere bepalingen van deze algemene voorwaarden nietig of vernietigbaar
+                            blijken, dan heeft dit
+                            geen invloed op de overige bepalingen van deze voorwaarden.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            2. Een bepaling die nietig of vernietigbaar is, wordt in dat geval vervangen door een
+                            bepaling die het dichtst in de
+                            buurt komt van wat FinExperts bij het opstellen van de voorwaarden op dat punt voor ogen
+                            had.
+                        </p>
+
+                        <h5 class="font-semibold text-brand-300 mt-6 mb-2">Artikel 30 - Toepasselijk recht en bevoegde
+                            rechter</h5>
+                        <p class="text-ink-muted mb-4">
+                            1. Op deze algemene voorwaarden en iedere onderliggende overeenkomst tussen de Klant en
+                            FinExperts is
+                            Nederlands recht van toepassing.
+                        </p>
+                        <p class="text-ink-muted mb-4">
+                            2. De rechter in het arrondissement van de vestigingsplaats van FinExperts is exclusief
+                            bevoegd om kennis te nemen
+                            van eventuele geschillen tussen de Klant en FinExperts, tenzij de wet iets anders bepaalt.
+                        </p>
+
+                        <p class="text-ink-muted text-xs mt-6">
+                            Opgesteld op 1 oktober 2025.
+                        </p>
+                    </section>
+
+                </div>
+
+                <div class="px-6 py-4 border-t border-white/10 flex justify-end">
+                    <button type="button" class="rounded-xl bg-white text-ink px-4 py-2 font-semibold"
+                        data-close-modal="">
+                        Sluiten
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p><a href="https://wa.me/31630036108" target="_blank" rel="noopener" class="floating-whatsapp" id="waFloat"
+            aria-label="Chat met FinExperts via WhatsApp">
+
+            <span class="wa-bubble">Hulp nodig? chat met ons</span>
+
+            <span class="wa-inner" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt=""
+                    class="wa-icon">
+            </span>
+        </a>
+
+
+
+
+
+
+
+
+
+
+
+    </p>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
