@@ -30,21 +30,12 @@ if (menuBtn && mobileMenu) {
   }
 
 
-  /* ========== SMOOTH SCROLL MET HEADER-OFFSET + MENU AUTODICHT ========== */
+  /* ========== SMOOTH SCROLL (steunt op CSS scroll-margin-top voor header-offset) ========== */
   function smoothScrollTo(hash, pushHistory = true) {
     const target = document.querySelector(hash);
     if (!target) return;
 
-    const headerHeight = header ? header.offsetHeight : 0;
-    const extraOffset = 12; // klein beetje ruimte onder de header
-
-    const top =
-      target.getBoundingClientRect().top +
-      window.pageYOffset -
-      headerHeight -
-      extraOffset;
-
-    window.scrollTo({ top, behavior: 'smooth' });
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     if (pushHistory) {
       history.pushState(null, '', hash);
@@ -58,12 +49,14 @@ if (menuBtn && mobileMenu) {
       if (a.closest('.modal')) return; // geen smooth scroll in modal
 
       e.preventDefault();
-      smoothScrollTo(hash);
 
-      // 👉 menu automatisch dichtklappen als je vanuit het mobile menu klikt
+      // 👉 Sluit het mobiele menu EERST: dat laat de header inklappen vóórdat we
+      // scrollen, zodat de scroll niet halverwege "flitst" door een lay-out-shift.
       if (mobileMenu && a.closest('#mobileMenu')) {
         mobileMenu.classList.add('hidden');
       }
+
+      smoothScrollTo(hash);
     });
   });
 
@@ -277,14 +270,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const line = hero.querySelector('.h-px');
       const h1 = hero.querySelector('h1');
       const lede = hero.querySelector('p.text-ink-muted');
-      const ctaRow = hero.querySelector('.mt-10.flex.flex-wrap.items-center.gap-4');
+      const ctaRow = hero.querySelector('.mt-10.flex.flex-wrap.items-center.justify-center.gap-4');
+      const subline = hero.querySelector('p.text-sm.text-ink-muted');
       const trustRow = hero.querySelector('.border-t.border-line.flex.flex-wrap');
 
       const heroGroups = [
         [label, line].filter(Boolean),
         [h1].filter(Boolean),
         [lede].filter(Boolean),
-        [ctaRow].filter(Boolean),
+        [ctaRow, subline].filter(Boolean),
         [trustRow].filter(Boolean)
       ].filter((g) => g.length);
 
@@ -292,14 +286,14 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.set(heroGroups.flat(), { autoAlpha: 0, y: 20 });
         const heroTl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.7 } });
         heroGroups.forEach((group, i) => {
-          heroTl.to(group, { autoAlpha: 1, y: 0 }, i * 0.12);
+          heroTl.to(group, { autoAlpha: 1, y: 0, clearProps: 'all' }, i * 0.12);
         });
       }
     }
 
     if (!hasScrollTrigger) return; // rest van de choreografie vraagt scroll-detectie
 
-    /* ---- 2) SECTIE-KOPPEN: label + lijntje + H2 bij scroll ---- */
+    /* ---- 2) SECTIE-KOPPEN: label + lijntje + H2 + lede bij scroll ---- */
     ['#expertise', '#diensten', '#werkwijze', '#over', '#contact'].forEach((sel) => {
       const section = document.querySelector(sel);
       if (!section) return;
@@ -307,13 +301,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const label = section.querySelector('p.font-mono');
       const line = section.querySelector('.h-px');
       const heading = section.querySelector('h2');
-      const targets = [label, line, heading].filter(Boolean);
+      const lede = heading && heading.nextElementSibling && heading.nextElementSibling.tagName === 'P'
+        ? heading.nextElementSibling
+        : null;
+      const targets = [label, line, heading, lede].filter(Boolean);
       if (!targets.length) return;
 
       gsap.set(targets, { autoAlpha: 0, y: 24 });
       gsap.timeline({
         scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' }
-      }).to(targets, { autoAlpha: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08 });
+      }).to(targets, { autoAlpha: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.1, clearProps: 'all' });
     });
 
     /* ---- 3) LIJST-ITEMS MET STAGGER (expertise / diensten / werkwijze) ---- */
@@ -326,7 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
           start: 'top 80%',
           toggleActions: 'play none none none'
         }
-      }).to(items, { autoAlpha: 1, y: 0, duration, ease: 'power3.out', stagger: 0.08 });
+      }).to(items, { autoAlpha: 1, y: 0, duration, ease: 'power3.out', stagger: 0.1, clearProps: 'all' });
     };
 
     revealStaggerGroup(document.querySelectorAll('#expertise article'));
@@ -344,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.set(pairs, { autoAlpha: 0, scale: 0.96, transformOrigin: 'left center' });
         gsap.timeline({
           scrollTrigger: { trigger: statsSection, start: 'top 80%', toggleActions: 'play none none none' }
-        }).to(pairs, { autoAlpha: 1, scale: 1, duration: 0.6, ease: 'power3.out', stagger: 0.08 });
+        }).to(pairs, { autoAlpha: 1, scale: 1, duration: 0.6, ease: 'power3.out', stagger: 0.08, clearProps: 'all' });
       }
     }
 
@@ -357,8 +354,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const tl = gsap.timeline({
         scrollTrigger: { trigger: wrap, start: 'top 85%', toggleActions: 'play none none none' }
       });
-      tl.to(wrap, { autoAlpha: 1, duration: 0.9, ease: 'power3.out' }, 0);
-      if (img) tl.to(img, { scale: 1, duration: 0.9, ease: 'power3.out' }, 0);
+      tl.to(wrap, { autoAlpha: 1, duration: 0.9, ease: 'power3.out', clearProps: 'all' }, 0);
+      if (img) tl.to(img, { scale: 1, duration: 0.9, ease: 'power3.out', clearProps: 'all' }, 0);
     });
 
     /* ---- Herberekenen na volledige load (afbeeldingen, fonts, ...) ---- */

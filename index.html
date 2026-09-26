@@ -24,15 +24,15 @@
     <!-- Tailwind config (eigen kleuren / fonts) -->
     <script src="assets/js/tailwind-config.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts: één rustgevende sans (Inter) voor koppen én body, mono alleen voor labels/cijfers -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
-        href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"
         rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=140">
+    <link rel="stylesheet" href="assets/css/style.css?v=200">
 
     <!-- GSAP + ScrollTrigger (scroll-choreografie) -->
     <script defer="" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -46,15 +46,15 @@
     spellcheck="true" style="direction: ltr; min-height: 159px;" data-new-gr-c-s-check-loaded="14.1267.0"
     data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1267.0">
     <!-- Achtergrond mesh -->
-    <div class="fixed inset-0 -z-100 bg-mesh"></div>
+    <div class="fixed inset-0 -z-100 bg-mesh pointer-events-none"></div>
 
     <!-- ================= HEADER ================= -->
     <header class="sticky top-0 z-50 bg-paper border-b border-line transition-[box-shadow,border-color] duration-200">
-        <nav class="max-w-content mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+        <nav class="max-w-content mx-auto px-6 md:px-10 h-20 md:h-24 flex items-center justify-between">
 
             <!-- LOGO -> terug naar hero (logo is donker, dus alleen op lichte achtergrond) -->
-            <a href="#hero" class="flex items-center">
-                <img src="assets/img/Logo Transparency 1.png" alt="FinExperts" class="max-h-9 w-auto">
+            <a href="#hero" class="flex items-center shrink-0">
+                <img src="assets/img/Logo Transparency 1.png" alt="FinExperts" class="max-h-12 md:max-h-14 w-auto">
             </a>
 
             <!-- DESKTOP LINKS -->
@@ -117,23 +117,23 @@
 
     <!-- ================= HERO ================= -->
     <section id="hero" class="bg-paper">
-        <div class="max-w-content mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-16 md:pb-20">
+        <div class="max-w-4xl mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-6 md:pb-8 text-center">
 
             <p class="font-mono text-sm text-brand-600">— jouw financiële partner</p>
-            <div class="mt-2 h-px w-7 bg-brand-600"></div>
+            <div class="mt-2 mx-auto h-px w-7 bg-brand-600"></div>
 
-            <h1 class="mt-6 font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-tight text-ink max-w-4xl">
+            <h1 class="mt-6 font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-tight text-ink">
                 Jouw betrouwbare partner in <span class="text-brand-700">financiële deskundigheid</span>
             </h1>
 
-            <p class="mt-6 text-lg sm:text-xl text-ink-muted max-w-[60ch]">
+            <p class="mt-6 mx-auto text-lg sm:text-xl text-ink-muted max-w-[60ch]">
                 Administratie, belastingen en advies — helder, zorgvuldig en proactief. Voor
                 <span class="text-ink font-medium">ZZP</span> en <span class="text-ink font-medium">MKB</span>
                 in heel Nederland.
             </p>
 
             <!-- CTA -->
-            <div class="mt-10 flex flex-wrap items-center gap-4">
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <a href="#contact"
                     class="btn-primary inline-flex items-center justify-center rounded-sm px-6 py-3 text-base font-medium">
                     Plan een kennismaking
@@ -145,8 +145,13 @@
                 </a>
             </div>
 
+            <!-- Subregel -->
+            <p class="mt-4 text-sm text-ink-muted">
+                Persoonlijk en snel geholpen. Binnen 24 uur nemen wij contact met u op.
+            </p>
+
             <!-- Trust stats -->
-            <div class="mt-16 md:mt-20 pt-8 border-t border-line flex flex-wrap gap-x-12 gap-y-4">
+            <div class="mt-12 md:mt-16 pt-8 border-t border-line flex flex-wrap justify-center gap-x-12 gap-y-4">
                 <div class="flex items-baseline gap-2">
                     <span class="font-mono text-2xl text-ink">16+</span>
                     <span class="text-sm text-ink-muted">jaar</span>
@@ -161,11 +166,16 @@
             </div>
         </div>
 
-        <!-- Kleine ingekaderde foto -->
-        <div class="max-w-content mx-auto px-6 md:px-10 pb-16 md:pb-20">
-            <div class="framed-photo">
-                <img src="assets/img/foto3.jpg" alt="Overleg en samenwerking bij FinExperts">
-            </div>
+        <!-- Overloop-foto: geen hard kader, vervloeit in de paper-achtergrond -->
+        <div class="relative w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] mt-4 md:mt-6 mb-16 md:mb-24
+                    h-[280px] sm:h-[360px] md:h-[460px] overflow-hidden">
+            <img src="assets/img/iStock-1961171464.webp" alt="Administratie en advies bij FinExperts"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-brand-600/15"></div>
+            <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-paper to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-paper to-transparent"></div>
+            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-paper to-transparent"></div>
+            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-paper to-transparent"></div>
         </div>
     </section>
 
@@ -225,6 +235,13 @@
                 </div>
             </div>
 
+            <!-- Gecentreerde overloop-foto -->
+            <div class="mt-16 md:mt-20 flex justify-center">
+                <div class="framed-photo">
+                    <img src="assets/img/foto3.jpg" alt="Het team van FinExperts aan het werk op kantoor">
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -280,7 +297,7 @@
             <div class="mt-16 border-t border-line">
 
                 <!-- 01. FinExperts Administratie -->
-                <article class="border-b border-line py-10 md:py-14 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10">
+                <article class="border-b border-line py-10 md:py-14 px-4 -mx-4 md:px-6 md:-mx-6 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-surface">
                     <div class="font-mono text-sm text-brand-600">01</div>
 
                     <div class="mt-3 md:mt-0">
@@ -316,7 +333,7 @@
                 </article>
 
                 <!-- 02. FinExperts Advies -->
-                <article class="border-b border-line py-10 md:py-14 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10">
+                <article class="border-b border-line py-10 md:py-14 px-4 -mx-4 md:px-6 md:-mx-6 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-surface">
                     <div class="font-mono text-sm text-brand-600">02</div>
 
                     <div class="mt-3 md:mt-0">
@@ -349,7 +366,7 @@
                 </article>
 
                 <!-- 03. FinExperts Belastingen -->
-                <article class="border-b border-line py-10 md:py-14 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10">
+                <article class="border-b border-line py-10 md:py-14 px-4 -mx-4 md:px-6 md:-mx-6 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-surface">
                     <div class="font-mono text-sm text-brand-600">03</div>
 
                     <div class="mt-3 md:mt-0">
@@ -383,7 +400,7 @@
                 </article>
 
                 <!-- 04. FinExperts Consultancy -->
-                <article class="border-b border-line py-10 md:py-14 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10">
+                <article class="border-b border-line py-10 md:py-14 px-4 -mx-4 md:px-6 md:-mx-6 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-surface">
                     <div class="font-mono text-sm text-brand-600">04</div>
 
                     <div class="mt-3 md:mt-0">
@@ -436,59 +453,71 @@
                 <div class="absolute left-4 top-2 bottom-2 w-px bg-line" aria-hidden="true"></div>
 
                 <div class="space-y-10">
-                    <div class="relative pl-14">
+                    <div class="relative pl-14 group">
                         <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">01</span>
-                        <h3 class="font-display text-xl text-ink">Kennismaking</h3>
-                        <p class="mt-2 text-ink-muted max-w-2xl">
-                            De eerste stap is een persoonlijke kennismaking. We plannen een vrijblijvend gesprek waarin
-                            we samen jouw situatie, wensen en behoeften in kaart brengen.
-                        </p>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Kennismaking</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                De eerste stap is een persoonlijke kennismaking. We plannen een vrijblijvend gesprek waarin
+                                we samen jouw situatie, wensen en behoeften in kaart brengen.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="relative pl-14">
+                    <div class="relative pl-14 group">
                         <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">02</span>
-                        <h3 class="font-display text-xl text-ink">Aanmelden</h3>
-                        <p class="mt-2 text-ink-muted max-w-2xl">
-                            Na je aanmelding gaan wij direct aan de slag met het opzetten van je account en het
-                            inrichten van je administratie. We begeleiden je stap voor stap, zodat je snel kunt starten.
-                        </p>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Aanmelden</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Na je aanmelding gaan wij direct aan de slag met het opzetten van je account en het
+                                inrichten van je administratie. We begeleiden je stap voor stap, zodat je snel kunt starten.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="relative pl-14">
+                    <div class="relative pl-14 group">
                         <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">03</span>
-                        <h3 class="font-display text-xl text-ink">Introductie <span class="font-mono text-xs text-brand-600 align-middle">(video)</span></h3>
-                        <p class="mt-2 text-ink-muted max-w-2xl">
-                            Je krijgt van ons een duidelijke instructie met een heldere uitleg over welke gegevens en
-                            documenten wij van je nodig hebben.
-                        </p>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Introductie <span class="font-mono text-xs text-brand-600 align-middle">(video)</span></h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Je krijgt van ons een duidelijke instructie met een heldere uitleg over welke gegevens en
+                                documenten wij van je nodig hebben.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="relative pl-14">
+                    <div class="relative pl-14 group">
                         <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">04</span>
-                        <h3 class="font-display text-xl text-ink">Digitaal aanleveren</h3>
-                        <p class="mt-2 text-ink-muted max-w-2xl">
-                            Via onze software kun je eenvoudig facturen, documenten, bonnen en foto's uploaden, zowel
-                            via onze website als via de app. Snel, overzichtelijk en gebruiksvriendelijk.
-                        </p>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Digitaal aanleveren</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Via onze software kun je eenvoudig facturen, documenten, bonnen en foto's uploaden, zowel
+                                via onze website als via de app. Snel, overzichtelijk en gebruiksvriendelijk.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="relative pl-14">
+                    <div class="relative pl-14 group">
                         <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">05</span>
-                        <h3 class="font-display text-xl text-ink">Herinneringen</h3>
-                        <p class="mt-2 text-ink-muted max-w-2xl">
-                            Wij bewaken belangrijke deadlines zoals belastingaangiftes, deponeringen en andere
-                            wettelijke verplichtingen en sturen tijdig duidelijke herinneringen. Zo weet je precies waar
-                            je aan toe bent en kom je niet voor verrassingen te staan.
-                        </p>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Herinneringen</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Wij bewaken belangrijke deadlines zoals belastingaangiftes, deponeringen en andere
+                                wettelijke verplichtingen en sturen tijdig duidelijke herinneringen. Zo weet je precies waar
+                                je aan toe bent en kom je niet voor verrassingen te staan.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="relative pl-14">
+                    <div class="relative pl-14 group">
                         <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">06</span>
-                        <h3 class="font-display text-xl text-ink">Vast contactpersoon</h3>
-                        <p class="mt-2 text-ink-muted max-w-2xl">
-                            Je hebt een vaste contactpersoon die je 24/7 kunt bereiken via WhatsApp. Zo heb je altijd
-                            direct contact en staan wij klaar wanneer je ons nodig hebt.
-                        </p>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Vast contactpersoon</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Je hebt een vaste contactpersoon die je 24/7 kunt bereiken via WhatsApp. Zo heb je altijd
+                                direct contact en staan wij klaar wanneer je ons nodig hebt.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -696,7 +725,7 @@
             <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
 
                 <div>
-                    <p class="font-display text-lg">FinExperts</p>
+                    <p class="font-display text-2xl md:text-3xl">FinExperts</p>
                     <p class="mt-3 text-sm text-white/60 max-w-xs">
                         Administratie, belastingen en advies voor ZZP en MKB in heel Nederland.
                     </p>
@@ -1534,11 +1563,13 @@
 
     <a href="https://wa.me/31630036108" target="_blank" rel="noopener" class="floating-whatsapp" id="waFloat"
         aria-label="Chat met FinExperts via WhatsApp">
-        <span class="wa-bubble">Hulp nodig? chat met ons</span>
         <span class="wa-inner" aria-hidden="true">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt=""
-                class="wa-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+                <path fill="#fff"
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
         </span>
+        <span class="wa-bubble">Chat met ons</span>
     </a>
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 

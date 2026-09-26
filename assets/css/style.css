@@ -27,15 +27,43 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Ruimte boven elke sectie zodat de titel niet onder de sticky header verdwijnt
+   bij anchor-navigatie (nav, mobiel menu, of directe hash in de URL). */
+#hero, #expertise, #diensten, #werkwijze, #over, #contact {
+  scroll-margin-top: 96px;
+}
+@media (min-width: 768px) {
+  #hero, #expertise, #diensten, #werkwijze, #over, #contact {
+    scroll-margin-top: 112px;
+  }
+}
+
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
 }
 
+/* !important: Tailwind's CDN-preflight zet font-weight/-family op headings
+   naar 'inherit', wat anders altijd zou winnen van deze basisregel. */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Spectral', serif;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+}
+
+h1 {
+  font-weight: 700 !important;
 }
 
 ::selection {
@@ -75,14 +103,17 @@ header.scrolled {
   box-shadow: 0 1px 0 rgba(23, 32, 28, .06);
 }
 
-/* Kleine ingekaderde foto (geen full-bleed) — duotone hover-effect */
+/* Kleine foto die zacht overloopt in de sectie-achtergrond (geen hard kader) —
+   mask-image lost de foto/tint op naar de rand, ongeacht de achtergrondkleur
+   van de sectie (paper/brand-50/surface) — plus duotone hover-effect. */
 .framed-photo {
   position: relative;
   max-width: 420px;
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  border: 1px solid var(--line);
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at center, #000 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 75% at center, #000 60%, transparent 100%);
 }
 .framed-photo img {
   width: 100%;
@@ -144,46 +175,77 @@ header.scrolled {
   transform: none;
 }
 
-/* Zwevende WhatsApp-knop */
+/* Zwevende WhatsApp-knop — rond in rust, opent bij hover/focus */
 .floating-whatsapp {
   position: fixed;
   right: 1.25rem;
-  bottom: 1.25rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
   z-index: 40;
   display: flex;
   align-items: center;
-  gap: .6rem;
+  height: 56px;
+  max-width: 56px;
+  overflow: hidden;
   background: #25D366;
   color: #fff;
   text-decoration: none;
-  border-radius: 999px;
-  padding: .7rem 1.1rem;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, .3), 0 8px 10px -6px rgba(0, 0, 0, .2);
-  transition: background .18s, opacity .2s, transform .2s;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+  transition: max-width .35s ease, background .18s ease, transform .18s ease, box-shadow .18s ease;
+  white-space: nowrap;
 }
-.floating-whatsapp:hover {
+.floating-whatsapp:hover,
+.floating-whatsapp:focus-visible {
+  max-width: 220px;
   background: #1EBE5D;
+  transform: translateY(-2px);
+}
+.floating-whatsapp:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(37, 211, 102, .55), 0 8px 24px rgba(0, 0, 0, .18);
 }
 .floating-whatsapp.wa-hide {
   opacity: 0;
   transform: translateY(8px);
   pointer-events: none;
 }
-.wa-bubble {
-  font-size: .8rem;
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
-  white-space: nowrap;
-}
 .wa-inner {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 56px;
+  height: 56px;
 }
-.wa-icon {
-  width: 20px;
-  height: 20px;
+.wa-bubble {
+  padding-right: 1.25rem;
+  font-size: .875rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.floating-whatsapp:hover .wa-bubble,
+.floating-whatsapp:focus-visible .wa-bubble {
+  opacity: 1;
+  transition: opacity .2s ease .15s;
 }
 @media (max-width: 640px) {
+  .floating-whatsapp {
+    right: 1rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-whatsapp {
+    transition: background .18s ease;
+  }
+  .floating-whatsapp:hover,
+  .floating-whatsapp:focus-visible {
+    max-width: 56px;
+    transform: none;
+  }
   .wa-bubble {
     display: none;
   }
