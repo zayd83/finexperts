@@ -17,10 +17,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FinExperts — Administratie, Advies &amp; Belastingen</title>
+    <title>Werkwijze — FinExperts</title>
 
     <meta name="description"
-        content="Fin Experts: administratie, strategisch advies en belastingen voor MKB en ZZP. Modern, duidelijk en persoonlijk.">
+        content="Wij brengen structuur en helderheid in jouw onderneming. Ontdek onze werkwijze in 6 heldere stappen.">
     <link rel="icon" href="assets/img/favicon.png">
 
     <!-- Tailwind CDN -->
@@ -63,7 +63,7 @@
                 <a href="index.html#expertise" data-nav="expertise" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Onze
                     expertise</a>
                 <a href="diensten.html" data-nav="diensten" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Diensten</a>
-                <a href="werkwijze.html" data-nav="werkwijze" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Werkwijze</a>
+                <a href="werkwijze.html" data-nav="werkwijze" aria-current="page" class="text-sm text-brand-700 font-semibold transition-colors">Werkwijze</a>
                 <a href="over.html" data-nav="over" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Over ons</a>
                 <a href="contact.html" data-nav="contact" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Contact</a>
 
@@ -94,7 +94,7 @@
                     class="block px-2 py-2.5 text-ink-muted hover:text-brand-700 transition-colors">
                     Diensten
                 </a>
-                <a href="werkwijze.html" data-nav="werkwijze"
+                <a href="werkwijze.html" data-nav="werkwijze" aria-current="page"
                     class="block px-2 py-2.5 text-ink-muted hover:text-brand-700 transition-colors">
                     Werkwijze
                 </a>
@@ -114,147 +114,91 @@
             </div>
         </div>
     </header>
-    <!-- ================= HERO ================= -->
-    <section id="hero" class="bg-paper">
-        <div class="max-w-4xl mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-6 md:pb-8 text-center">
-
-            <p class="font-mono text-sm text-brand-600">— jouw financiële partner</p>
-            <div class="mt-2 mx-auto h-px w-7 bg-brand-600"></div>
-
-            <h1 class="mt-6 font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-tight text-ink">
-                Jouw betrouwbare partner in <span class="text-brand-700">financiële deskundigheid</span>
-            </h1>
-
-            <p class="mt-6 mx-auto text-lg sm:text-xl text-ink-muted max-w-[60ch]">
-                Administratie, belastingen en advies — helder, zorgvuldig en proactief. Voor
-                <span class="text-ink font-medium">ZZP</span> en <span class="text-ink font-medium">MKB</span>
-                in heel Nederland.
-            </p>
-
-            <!-- CTA -->
-            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a href="contact.html"
-                    class="btn-primary inline-flex items-center justify-center rounded-sm px-6 py-3 text-base font-medium">
-                    Plan een kennismaking
-                </a>
-
-                <a href="diensten.html"
-                    class="btn-ghost inline-flex items-center justify-center rounded-sm px-6 py-3 text-base font-medium">
-                    Onze diensten
-                </a>
-            </div>
-
-            <!-- Subregel -->
-            <p class="mt-4 text-sm text-ink-muted">
-                Persoonlijk en snel geholpen. Binnen 24 uur nemen wij contact met u op.
-            </p>
-
-            <!-- Trust stats -->
-            <div class="mt-12 md:mt-16 pt-8 border-t border-line flex flex-wrap justify-center gap-x-12 gap-y-4">
-                <div class="flex items-baseline gap-2">
-                    <span class="font-mono text-2xl text-ink">16+</span>
-                    <span class="text-sm text-ink-muted">jaar</span>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <span class="font-mono text-2xl text-ink">24/7</span>
-                    <span class="text-sm text-ink-muted">bereikbaar</span>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <span class="font-mono text-2xl text-ink">MKB &amp; ZZP</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Overloop-foto: geen hard kader, vervloeit in de paper-achtergrond -->
-        <div class="relative w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] mt-4 md:mt-6 mb-16 md:mb-24
-                    h-[280px] sm:h-[360px] md:h-[460px] overflow-hidden">
-            <img src="assets/img/iStock-1961171464.webp" alt="Administratie en advies bij FinExperts"
-                class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-brand-600/15"></div>
-            <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-paper to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-paper to-transparent"></div>
-            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-paper to-transparent"></div>
-            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-paper to-transparent"></div>
-        </div>
-    </section>
-    <!-- ================= EXPERTISE ================= -->
-    <section id="expertise" class="bg-paper py-24 md:py-32">
+    <!-- ================= WERKWIJZE ================= -->
+    <section id="werkwijze" class="bg-paper py-24 md:py-32">
         <div class="max-w-content mx-auto px-6 md:px-10">
 
-            <div class="grid gap-10 md:grid-cols-2 md:gap-16">
+            <p class="font-mono text-sm text-brand-600">— werkwijze</p>
+            <div class="mt-2 h-px w-7 bg-brand-600"></div>
+            <h2 class="mt-4 font-display text-3xl md:text-4xl text-ink max-w-xl">
+                Wat is onze werkwijze?
+            </h2>
+            <p class="mt-4 text-ink-muted max-w-xl">
+                Wij brengen structuur en helderheid in jouw onderneming!
+            </p>
 
-                <!-- Tekst -->
-                <div>
-                    <p class="font-mono text-sm text-brand-600">— onze expertise</p>
-                    <div class="mt-2 h-px w-7 bg-brand-600"></div>
-                    <h2 class="mt-4 font-display text-3xl md:text-4xl text-ink max-w-md">
-                        Complete ondersteuning op administratief en strategisch vlak.
-                    </h2>
-                    <p class="mt-4 text-ink-muted max-w-md">
-                        Van administratie en belastingaangiften tot strategisch advies: u heeft één betrouwbare partner die
-                        meedenkt, vooruitkijkt en rust brengt in uw cijfers.
-                    </p>
+            <!-- Timeline -->
+            <div class="mt-16 relative">
+                <div class="absolute left-4 top-2 bottom-2 w-px bg-line" aria-hidden="true"></div>
+
+                <div class="space-y-10">
+                    <div class="relative pl-14 group">
+                        <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">01</span>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Kennismaking</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                De eerste stap is een persoonlijke kennismaking. We plannen een vrijblijvend gesprek waarin
+                                we samen jouw situatie, wensen en behoeften in kaart brengen.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-14 group">
+                        <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">02</span>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Aanmelden</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Na je aanmelding gaan wij direct aan de slag met het opzetten van je account en het
+                                inrichten van je administratie. We begeleiden je stap voor stap, zodat je snel kunt starten.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-14 group">
+                        <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">03</span>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Introductie <span class="font-mono text-xs text-brand-600 align-middle">(video)</span></h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Je krijgt van ons een duidelijke instructie met een heldere uitleg over welke gegevens en
+                                documenten wij van je nodig hebben.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-14 group">
+                        <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">04</span>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Digitaal aanleveren</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Via onze software kun je eenvoudig facturen, documenten, bonnen en foto's uploaden, zowel
+                                via onze website als via de app. Snel, overzichtelijk en gebruiksvriendelijk.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-14 group">
+                        <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">05</span>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Herinneringen</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Wij bewaken belangrijke deadlines zoals belastingaangiftes, deponeringen en andere
+                                wettelijke verplichtingen en sturen tijdig duidelijke herinneringen. Zo weet je precies waar
+                                je aan toe bent en kom je niet voor verrassingen te staan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-14 group">
+                        <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper font-mono text-xs text-brand-600">06</span>
+                        <div class="rounded-sm p-2 -m-2 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-surface">
+                            <h3 class="font-display text-xl text-ink">Vast contactpersoon</h3>
+                            <p class="mt-2 text-ink-muted max-w-2xl">
+                                Je hebt een vaste contactpersoon die je 24/7 kunt bereiken via WhatsApp. Zo heb je altijd
+                                direct contact en staan wij klaar wanneer je ons nodig hebt.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Haarlijn-lijst 01-04 -->
-                <div class="border-t border-line">
-                    <article class="border-b border-line py-5">
-                        <div class="flex items-baseline gap-4">
-                            <span class="font-mono text-sm text-brand-600">01</span>
-                            <h3 class="font-display text-lg text-ink">FinExperts Administratie</h3>
-                        </div>
-                        <p class="mt-1 text-sm text-ink-muted">Betrouwbare administratie als fundament.</p>
-                    </article>
-                    <article class="border-b border-line py-5">
-                        <div class="flex items-baseline gap-4">
-                            <span class="font-mono text-sm text-brand-600">02</span>
-                            <h3 class="font-display text-lg text-ink">FinExperts Advies</h3>
-                        </div>
-                        <p class="mt-1 text-sm text-ink-muted">Strategisch financieel advies en sparringpartner.</p>
-                    </article>
-                    <article class="border-b border-line py-5">
-                        <div class="flex items-baseline gap-4">
-                            <span class="font-mono text-sm text-brand-600">03</span>
-                            <h3 class="font-display text-lg text-ink">FinExperts Belastingen</h3>
-                        </div>
-                        <p class="mt-1 text-sm text-ink-muted">Fiscale zekerheid en optimale benutting van regelingen.</p>
-                    </article>
-                    <article class="py-5">
-                        <div class="flex items-baseline gap-4">
-                            <span class="font-mono text-sm text-brand-600">04</span>
-                            <h3 class="font-display text-lg text-ink">FinExperts Consultancy</h3>
-                        </div>
-                        <p class="mt-1 text-sm text-ink-muted">Consultancy, outsourcing en duurzame ondersteuning.</p>
-                    </article>
-                </div>
-            </div>
-
-            <!-- Gecentreerde overloop-foto -->
-            <div class="mt-16 md:mt-20 flex justify-center">
-                <div class="framed-photo">
-                    <img src="assets/img/foto3.jpg" alt="Het team van FinExperts aan het werk op kantoor">
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- ================= STATS (donkere feature-band) ================= -->
-    <section class="bg-brand-900 text-white py-20 md:py-28">
-        <div class="max-w-content mx-auto px-6 md:px-10 grid gap-10 md:grid-cols-3">
-            <div class="md:border-l md:border-white/15 md:pl-8 md:first:border-l-0 md:first:pl-0">
-                <!-- placeholder — vervang door echte cijfers -->
-                <span class="font-mono text-4xl md:text-5xl text-white" data-count="94">0</span><span class="font-mono text-4xl md:text-5xl text-brand-300">%</span>
-                <p class="mt-2 text-sm text-white/70 max-w-xs">Ondernemers ervaren meer rust door administratieve ontzorging.</p>
-            </div>
-            <div class="md:border-l md:border-white/15 md:pl-8">
-                <!-- placeholder — vervang door echte cijfers -->
-                <span class="font-mono text-4xl md:text-5xl text-white" data-count="78">0</span><span class="font-mono text-4xl md:text-5xl text-brand-300">%</span>
-                <p class="mt-2 text-sm text-white/70 max-w-xs">Maakt actief gebruik van belastingoptimalisatie.</p>
-            </div>
-            <div class="md:border-l md:border-white/15 md:pl-8">
-                <!-- placeholder — vervang door echte cijfers -->
-                <span class="font-mono text-4xl md:text-5xl text-white" data-count="88">0</span><span class="font-mono text-4xl md:text-5xl text-brand-300">%</span>
-                <p class="mt-2 text-sm text-white/70 max-w-xs">Wil maandelijks inzicht in cijfers en voortgang.</p>
             </div>
         </div>
     </section>

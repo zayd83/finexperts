@@ -17,10 +17,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FinExperts — Administratie, Advies &amp; Belastingen</title>
+    <title>Diensten — FinExperts</title>
 
     <meta name="description"
-        content="Fin Experts: administratie, strategisch advies en belastingen voor MKB en ZZP. Modern, duidelijk en persoonlijk.">
+        content="Complete ondersteuning op administratief, fiscaal en strategisch vlak: administratie, advies, belastingen en consultancy voor MKB en ZZP.">
     <link rel="icon" href="assets/img/favicon.png">
 
     <!-- Tailwind CDN -->
@@ -62,7 +62,7 @@
             <div class="hidden md:flex items-center gap-8">
                 <a href="index.html#expertise" data-nav="expertise" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Onze
                     expertise</a>
-                <a href="diensten.html" data-nav="diensten" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Diensten</a>
+                <a href="diensten.html" data-nav="diensten" aria-current="page" class="text-sm text-brand-700 font-semibold transition-colors">Diensten</a>
                 <a href="werkwijze.html" data-nav="werkwijze" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Werkwijze</a>
                 <a href="over.html" data-nav="over" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Over ons</a>
                 <a href="contact.html" data-nav="contact" class="text-sm text-ink-muted hover:text-brand-700 transition-colors">Contact</a>
@@ -90,7 +90,7 @@
                     Onze expertise
                 </a>
 
-                <a href="diensten.html" data-nav="diensten"
+                <a href="diensten.html" data-nav="diensten" aria-current="page"
                     class="block px-2 py-2.5 text-ink-muted hover:text-brand-700 transition-colors">
                     Diensten
                 </a>
@@ -114,147 +114,168 @@
             </div>
         </div>
     </header>
-    <!-- ================= HERO ================= -->
-    <section id="hero" class="bg-paper">
-        <div class="max-w-4xl mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-6 md:pb-8 text-center">
-
-            <p class="font-mono text-sm text-brand-600">— jouw financiële partner</p>
-            <div class="mt-2 mx-auto h-px w-7 bg-brand-600"></div>
-
-            <h1 class="mt-6 font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-tight text-ink">
-                Jouw betrouwbare partner in <span class="text-brand-700">financiële deskundigheid</span>
-            </h1>
-
-            <p class="mt-6 mx-auto text-lg sm:text-xl text-ink-muted max-w-[60ch]">
-                Administratie, belastingen en advies — helder, zorgvuldig en proactief. Voor
-                <span class="text-ink font-medium">ZZP</span> en <span class="text-ink font-medium">MKB</span>
-                in heel Nederland.
-            </p>
-
-            <!-- CTA -->
-            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a href="contact.html"
-                    class="btn-primary inline-flex items-center justify-center rounded-sm px-6 py-3 text-base font-medium">
-                    Plan een kennismaking
-                </a>
-
-                <a href="diensten.html"
-                    class="btn-ghost inline-flex items-center justify-center rounded-sm px-6 py-3 text-base font-medium">
-                    Onze diensten
-                </a>
-            </div>
-
-            <!-- Subregel -->
-            <p class="mt-4 text-sm text-ink-muted">
-                Persoonlijk en snel geholpen. Binnen 24 uur nemen wij contact met u op.
-            </p>
-
-            <!-- Trust stats -->
-            <div class="mt-12 md:mt-16 pt-8 border-t border-line flex flex-wrap justify-center gap-x-12 gap-y-4">
-                <div class="flex items-baseline gap-2">
-                    <span class="font-mono text-2xl text-ink">16+</span>
-                    <span class="text-sm text-ink-muted">jaar</span>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <span class="font-mono text-2xl text-ink">24/7</span>
-                    <span class="text-sm text-ink-muted">bereikbaar</span>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <span class="font-mono text-2xl text-ink">MKB &amp; ZZP</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Overloop-foto: geen hard kader, vervloeit in de paper-achtergrond -->
-        <div class="relative w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] mt-4 md:mt-6 mb-16 md:mb-24
-                    h-[280px] sm:h-[360px] md:h-[460px] overflow-hidden">
-            <img src="assets/img/iStock-1961171464.webp" alt="Administratie en advies bij FinExperts"
-                class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-brand-600/15"></div>
-            <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-paper to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-paper to-transparent"></div>
-            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-paper to-transparent"></div>
-            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-paper to-transparent"></div>
-        </div>
-    </section>
-    <!-- ================= EXPERTISE ================= -->
-    <section id="expertise" class="bg-paper py-24 md:py-32">
+    <!-- ================= DIENSTEN ================= -->
+    <section id="diensten" class="bg-brand-50 py-24 md:py-32">
         <div class="max-w-content mx-auto px-6 md:px-10">
 
-            <div class="grid gap-10 md:grid-cols-2 md:gap-16">
-
-                <!-- Tekst -->
-                <div>
-                    <p class="font-mono text-sm text-brand-600">— onze expertise</p>
-                    <div class="mt-2 h-px w-7 bg-brand-600"></div>
-                    <h2 class="mt-4 font-display text-3xl md:text-4xl text-ink max-w-md">
-                        Complete ondersteuning op administratief en strategisch vlak.
-                    </h2>
-                    <p class="mt-4 text-ink-muted max-w-md">
-                        Van administratie en belastingaangiften tot strategisch advies: u heeft één betrouwbare partner die
-                        meedenkt, vooruitkijkt en rust brengt in uw cijfers.
-                    </p>
-                </div>
-
-                <!-- Haarlijn-lijst 01-04 -->
-                <div class="border-t border-line">
-                    <article class="border-b border-line py-5">
-                        <div class="flex items-baseline gap-4">
-                            <span class="font-mono text-sm text-brand-600">01</span>
-                            <h3 class="font-display text-lg text-ink">FinExperts Administratie</h3>
-                        </div>
-                        <p class="mt-1 text-sm text-ink-muted">Betrouwbare administratie als fundament.</p>
-                    </article>
-                    <article class="border-b border-line py-5">
-                        <div class="flex items-baseline gap-4">
-                            <span class="font-mono text-sm text-brand-600">02</span>
-                            <h3 class="font-display text-lg text-ink">FinExperts Advies</h3>
-                        </div>
-                        <p class="mt-1 text-sm text-ink-muted">Strategisch financieel advies en sparringpartner.</p>
-                    </article>
-                    <article class="border-b border-line py-5">
-                        <div class="flex items-baseline gap-4">
-                            <span class="font-mono text-sm text-brand-600">03</span>
-                            <h3 class="font-display text-lg text-ink">FinExperts Belastingen</h3>
-                        </div>
-                        <p class="mt-1 text-sm text-ink-muted">Fiscale zekerheid en optimale benutting van regelingen.</p>
-                    </article>
-                    <article class="py-5">
-                        <div class="flex items-baseline gap-4">
-                            <span class="font-mono text-sm text-brand-600">04</span>
-                            <h3 class="font-display text-lg text-ink">FinExperts Consultancy</h3>
-                        </div>
-                        <p class="mt-1 text-sm text-ink-muted">Consultancy, outsourcing en duurzame ondersteuning.</p>
-                    </article>
-                </div>
+            <!-- Intro -->
+            <div class="max-w-2xl">
+                <p class="font-mono text-sm text-brand-600">— onze diensten</p>
+                <div class="mt-2 h-px w-7 bg-brand-600"></div>
+                <h2 class="mt-4 font-display text-3xl md:text-4xl text-ink">
+                    Complete ondersteuning op administratief, fiscaal en strategisch vlak
+                </h2>
+                <p class="mt-4 text-ink-muted">
+                    Wij bieden een totaalpakket aan financiële en fiscale dienstverlening:
+                    van administratief beheer en jaarrekeningen tot strategisch advies,
+                    belastingzaken en consultancy. Zo heeft u één betrouwbare partner
+                    voor alle financiële processen binnen uw onderneming.
+                </p>
             </div>
 
-            <!-- Gecentreerde overloop-foto -->
-            <div class="mt-16 md:mt-20 flex justify-center">
-                <div class="framed-photo">
-                    <img src="assets/img/foto3.jpg" alt="Het team van FinExperts aan het werk op kantoor">
-                </div>
+            <!-- Kleine ingekaderde foto -->
+            <div class="mt-8 framed-photo">
+                <img src="assets/img/foto100.jpeg" alt="Team van FinExperts aan het werk in een moderne kantooromgeving."
+                    loading="lazy">
             </div>
+            <p class="mt-3 font-mono text-xs text-brand-600">Administratie · Belastingen · Advies · Consultancy</p>
 
-        </div>
-    </section>
-    <!-- ================= STATS (donkere feature-band) ================= -->
-    <section class="bg-brand-900 text-white py-20 md:py-28">
-        <div class="max-w-content mx-auto px-6 md:px-10 grid gap-10 md:grid-cols-3">
-            <div class="md:border-l md:border-white/15 md:pl-8 md:first:border-l-0 md:first:pl-0">
-                <!-- placeholder — vervang door echte cijfers -->
-                <span class="font-mono text-4xl md:text-5xl text-white" data-count="94">0</span><span class="font-mono text-4xl md:text-5xl text-brand-300">%</span>
-                <p class="mt-2 text-sm text-white/70 max-w-xs">Ondernemers ervaren meer rust door administratieve ontzorging.</p>
-            </div>
-            <div class="md:border-l md:border-white/15 md:pl-8">
-                <!-- placeholder — vervang door echte cijfers -->
-                <span class="font-mono text-4xl md:text-5xl text-white" data-count="78">0</span><span class="font-mono text-4xl md:text-5xl text-brand-300">%</span>
-                <p class="mt-2 text-sm text-white/70 max-w-xs">Maakt actief gebruik van belastingoptimalisatie.</p>
-            </div>
-            <div class="md:border-l md:border-white/15 md:pl-8">
-                <!-- placeholder — vervang door echte cijfers -->
-                <span class="font-mono text-4xl md:text-5xl text-white" data-count="88">0</span><span class="font-mono text-4xl md:text-5xl text-brand-300">%</span>
-                <p class="mt-2 text-sm text-white/70 max-w-xs">Wil maandelijks inzicht in cijfers en voortgang.</p>
+            <!-- 4 diensten als editorial rijen -->
+            <div class="mt-16 border-t border-line">
+
+                <!-- 01. FinExperts Administratie -->
+                <article class="border-b border-line py-10 md:py-14 px-4 -mx-4 md:px-6 md:-mx-6 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-surface">
+                    <div class="font-mono text-sm text-brand-600">01</div>
+
+                    <div class="mt-3 md:mt-0">
+                        <h3 class="font-display text-2xl text-ink">Betrouwbare administratie als fundament</h3>
+                        <p class="mt-3 text-ink-muted">
+                            Een betrouwbare administratie is de basis van elk gezond bedrijf.
+                            Toch kost het ondernemers vaak veel tijd en energie. Wij nemen uw
+                            volledige administratie uit handen, zodat u zich kunt richten op groei
+                            en strategie.
+                        </p>
+                        <p class="mt-5 text-sm font-medium text-ink">Wat wij voor u doen:</p>
+                        <ul class="mt-2 space-y-1.5 text-sm text-ink-muted">
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Inkoop- en verkoopadministratie</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Bankverwerking en betalingsstromen</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Debiteuren- en crediteurenbeheer</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Salarisadministratie</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Tussentijdse cijfers en periodieke rapportages</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Jaarrekeningen opstellen conform de richtlijnen</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Publicatiestukken voor de KvK opstellen en deponeren</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Digitaliseren en automatiseren van administratieve processen</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 md:mt-0">
+                        <div class="bg-surface border-l-2 border-brand-600 p-5">
+                            <p class="font-mono text-xs text-brand-600">Uw voordeel</p>
+                            <p class="mt-2 text-sm text-ink">
+                                Altijd inzicht in actuele cijfers, zekerheid dat alles correct en
+                                tijdig wordt verwerkt en de vrijheid om u te richten op ondernemen.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 02. FinExperts Advies -->
+                <article class="border-b border-line py-10 md:py-14 px-4 -mx-4 md:px-6 md:-mx-6 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-surface">
+                    <div class="font-mono text-sm text-brand-600">02</div>
+
+                    <div class="mt-3 md:mt-0">
+                        <h3 class="font-display text-2xl text-ink">Strategisch financieel advies en sparringpartner</h3>
+                        <p class="mt-3 text-ink-muted">
+                            Wij gaan verder dan het netjes bijhouden van de administratie. Wij zijn
+                            uw sparringpartner in financiële vraagstukken en denken proactief mee
+                            over de toekomst van uw onderneming.
+                        </p>
+                        <p class="mt-5 text-sm font-medium text-ink">Wat wij bieden:</p>
+                        <ul class="mt-2 space-y-1.5 text-sm text-ink-muted">
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Analyse van bedrijfsresultaten, trends en KPI's</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Cashflowmanagement en liquiditeitsprognoses</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Begrotingen, investeringsanalyses en businesscases</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Procesoptimalisatie (efficiënter werken, lagere kosten, betere structuur)</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Strategische begeleiding bij groei, investeringen of herstructurering</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 md:mt-0">
+                        <div class="bg-surface border-l-2 border-brand-600 p-5">
+                            <p class="font-mono text-xs text-brand-600">Uw voordeel</p>
+                            <p class="mt-2 text-sm text-ink">
+                                Wij vertalen cijfers naar duidelijke inzichten en concrete acties.
+                                U neemt betere beslissingen, stuurt doelgerichter en bouwt met
+                                vertrouwen aan de toekomst.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 03. FinExperts Belastingen -->
+                <article class="border-b border-line py-10 md:py-14 px-4 -mx-4 md:px-6 md:-mx-6 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-surface">
+                    <div class="font-mono text-sm text-brand-600">03</div>
+
+                    <div class="mt-3 md:mt-0">
+                        <h3 class="font-display text-2xl text-ink">Fiscale zekerheid en optimale benutting van regelingen</h3>
+                        <p class="mt-3 text-ink-muted">
+                            Belastingen zijn een complex en voortdurend veranderend vakgebied.
+                            Met onze kennis van fiscaliteiten zorgen wij dat u niets over het
+                            hoofd ziet en optimaal gebruikmaakt van fiscale regelingen en voordelen.
+                        </p>
+                        <p class="mt-5 text-sm font-medium text-ink">Wat wij doen:</p>
+                        <ul class="mt-2 space-y-1.5 text-sm text-ink-muted">
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Aangiften omzetbelasting (btw)</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Aangiften inkomstenbelasting</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Aangifte vennootschapsbelasting</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Aangifte dividendbelasting</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Aangifte loonheffing</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Controle en begeleiding bij belastingcontroles</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Fiscale structuur- en ondernemingsadvies</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 md:mt-0">
+                        <div class="bg-surface border-l-2 border-brand-600 p-5">
+                            <p class="font-mono text-xs text-brand-600">Uw voordeel</p>
+                            <p class="mt-2 text-sm text-ink">
+                                Geen zorgen over deadlines of fouten, altijd voldoen aan de
+                                wet- en regelgeving, en nooit meer betalen dan nodig.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 04. FinExperts Consultancy -->
+                <article class="border-b border-line py-10 md:py-14 px-4 -mx-4 md:px-6 md:-mx-6 md:grid md:grid-cols-[auto_1fr_20rem] md:gap-10 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-surface">
+                    <div class="font-mono text-sm text-brand-600">04</div>
+
+                    <div class="mt-3 md:mt-0">
+                        <h3 class="font-display text-2xl text-ink">Consultancy, outsourcing en tijdelijke ondersteuning</h3>
+                        <p class="mt-3 text-ink-muted">
+                            Naast onze kernservices ondersteunen wij ondernemers en organisaties
+                            breed met consultancy- en interimdiensten.
+                        </p>
+                        <p class="mt-5 text-sm font-medium text-ink">Waar wij u bij helpen:</p>
+                        <ul class="mt-2 space-y-1.5 text-sm text-ink-muted">
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Strategisch advies – samen ontwikkelen we een toekomstbestendige koers</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Financiële optimalisatie – inzicht in kansen, risico's en verbeterpunten</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Volledige outsourcing van de financiële administratie</li>
+                            <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand-600"></span>Tijdelijke ondersteuning bij piekdrukte, ziekteverzuim of vacatures</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 md:mt-0">
+                        <div class="bg-surface border-l-2 border-brand-600 p-5">
+                            <p class="font-mono text-xs text-brand-600">Uw voordeel</p>
+                            <p class="mt-2 text-sm text-ink">
+                                FinExperts Consultancy is uw brede en betrouwbare financiële partner:
+                                van dagelijkse administratie tot strategisch advies op directieniveau.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>

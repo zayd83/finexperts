@@ -53,6 +53,26 @@ body {
   color: var(--ink);
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 400;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .4s ease, transform .4s ease;
+}
+
+/* Zachte pagina-overgang. De 'js-loading'-klasse wordt alleen door een inline
+   <script> in <head> gezet (zie head-fragment), dus zonder JS blijft de pagina
+   gewoon zichtbaar — geen CSS die content permanent verbergt. */
+html.js-loading body {
+  opacity: 0;
+  transform: translateY(8px);
+}
+html.page-leaving body {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }
 
 /* !important: Tailwind's CDN-preflight zet font-weight/-family op headings

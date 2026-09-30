@@ -1,3 +1,50 @@
+/* ========== ZACHTE PAGINA-OVERGANG (fade-in bij load, fade-out bij interne link) ========== */
+(function () {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Fade-in: 'js-loading' (gezet door een inline <script> in <head>, vóór de eerste paint)
+  // weer weghalen zodra dit script draait — de CSS-transitie in style.css doet de rest.
+  // Zonder JS wordt de klasse nooit gezet, dus blijft de pagina gewoon zichtbaar.
+  if (prefersReducedMotion) {
+    document.documentElement.classList.remove('js-loading');
+    return; // geen fade-out-interceptie bij reduced motion: normale, directe navigatie
+  }
+  requestAnimationFrame(() => {
+    document.documentElement.classList.remove('js-loading');
+  });
+
+  const FADE_MS = 300;
+  const normalizePath = (p) => (p.replace(/index\.html$/, '').replace(/\/$/, '')) || '/';
+
+  document.addEventListener('click', (e) => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+    const a = e.target.closest('a');
+    if (!a) return;
+    if (a.target && a.target !== '_self') return; // _blank etc. -> normale navigatie
+    if (a.hasAttribute('download')) return;
+
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+    let url;
+    try {
+      url = new URL(href, window.location.href);
+    } catch (err) {
+      return;
+    }
+
+    if (url.origin !== window.location.origin) return; // externe link: normale navigatie
+    if (normalizePath(url.pathname) === normalizePath(window.location.pathname)) return; // zelfde pagina: laat de smooth-scroll/hash dit afhandelen
+
+    e.preventDefault();
+    document.documentElement.classList.add('page-leaving');
+    setTimeout(() => {
+      window.location.href = url.href;
+    }, FADE_MS);
+  });
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   /* ========== MOBILE MENU ========== */
   const header = document.querySelector('header');
@@ -14,8 +61,10 @@ if (menuBtn && mobileMenu) {
     mobileMenu.classList.toggle('hidden');
   });
 
-  // Sluit menu zodra je op een link klikt
-  mobileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
+  // Sluit menu zodra je op een link klikt (paginalinks én de #expertise-anchor) —
+  // dit moet vóór de eventuele navigatie/scroll gebeuren, anders "flitst" de
+  // pagina door de layout-shift van het inklappende menu.
+  mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => closeMobileMenu());
   });
 }
@@ -42,25 +91,7 @@ if (menuBtn && mobileMenu) {
     }
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener('click', (e) => {
-      const hash = a.getAttribute('href');
-      if (!hash || hash === '#') return;
-      if (a.closest('.modal')) return; // geen smooth scroll in modal
-
-      e.preventDefault();
-
-      // 👉 Sluit het mobiele menu EERST: dat laat de header inklappen vóórdat we
-      // scrollen, zodat de scroll niet halverwege "flitst" door een lay-out-shift.
-      if (mobileMenu && a.closest('#mobileMenu')) {
-        mobileMenu.classList.add('hidden');
-      }
-
-      smoothScrollTo(hash);
-    });
-  });
-
-  // Als je op een hash refresht (#contact, #inzicht, ...) → juiste offset
+  // Als je op een hash refresht/aankomt (index.html#expertise, ...) → juiste offset
   if (window.location.hash) {
     setTimeout(() => {
       smoothScrollTo(window.location.hash, false);
