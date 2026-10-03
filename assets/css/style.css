@@ -54,20 +54,21 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 400;
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity .4s ease, transform .4s ease;
+  transition: opacity .4s ease;
 }
 
 /* Zachte pagina-overgang. De 'js-loading'-klasse wordt alleen door een inline
    <script> in <head> gezet (zie head-fragment), dus zonder JS blijft de pagina
-   gewoon zichtbaar — geen CSS die content permanent verbergt. */
+   gewoon zichtbaar — geen CSS die content permanent verbergt.
+   BELANGRIJK: alleen opacity, GEEN transform op <body>. Een transform op body
+   creëert een nieuw containing block voor alle position:fixed-kinderen (de
+   WhatsApp-knop, de modal) — ze gaan dan "vast" staan t.o.v. body i.p.v. het
+   viewport en scrollen zo foutief met de pagina mee. */
 html.js-loading body {
   opacity: 0;
-  transform: translateY(8px);
 }
 html.page-leaving body {
   opacity: 0;
-  transform: translateY(-8px);
 }
 @media (prefers-reduced-motion: reduce) {
   body {
@@ -200,7 +201,7 @@ header.scrolled {
   position: fixed;
   right: 1.25rem;
   bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
-  z-index: 40;
+  z-index: 70; /* boven de footer (z-60) — anders schildert de footer de knop weg op kortere pagina's */
   display: flex;
   align-items: center;
   height: 56px;

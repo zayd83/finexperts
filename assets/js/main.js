@@ -228,8 +228,12 @@ if (menuBtn && mobileMenu) {
 
 const waFloat = document.getElementById('waFloat');
 const footerEl = document.querySelector('footer');
+// Alleen de onderste regel (copyright + Privacy/Voorwaarden) kan de zwevende knop
+// echt overlappen — niet de hele footer. Zo verbergt de knop niet te vroeg op
+// kortere pagina's waar de footer al (bijna) in beeld is bij het laden.
+const footerLegalRow = footerEl ? footerEl.querySelector('.border-t.border-white\\/15') : null;
 
-if (waFloat && footerEl && 'IntersectionObserver' in window) {
+if (waFloat && (footerLegalRow || footerEl) && 'IntersectionObserver' in window) {
   const ioWa = new IntersectionObserver(
     (entries) => {
       waFloat.classList.toggle('wa-hide', entries[0].isIntersecting);
@@ -237,7 +241,7 @@ if (waFloat && footerEl && 'IntersectionObserver' in window) {
     { threshold: 0.15 }
   );
 
-  ioWa.observe(footerEl);
+  ioWa.observe(footerLegalRow || footerEl);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
